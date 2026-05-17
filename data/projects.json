@@ -4,16 +4,16 @@
       "id": "wrioter",
       "title": "Wrioter",
       "type": "software",
-      "description": "Laravel/Vue.js content management and workflow platform with real-time collaboration features.",
-      "icon": "software.svg",
+      "description": "Laravel/Vue.js creative writing platform and workflow platform.",
+      "icon": "assets/Project Icons/Site - Wrioter.jpg",
       "tags": ["PHP", "Vue.js", "Laravel"]
     },
     {
       "id": "3d-prints",
-      "title": "Custom 3D Prints",
+      "title": "Maple Film Supply 3D Printing",
       "type": "making",
-      "description": "Designed and manufactured custom enclosures, mechanical parts, and prototypes using FDM and resin printing.",
-      "icon": "nozzle.svg",
+      "description": "Designed and manufactured custom enclosures, mechanical parts, and prototypes using FDM printing.",
+      "icon": "assets/Project Icons/Project - 3DPrinter.jpg",
       "tags": ["CAD", "FDM", "Design"],
       "animation": "sway"
     },
@@ -22,7 +22,7 @@
       "title": "CNC Projects",
       "type": "making",
       "description": "Machined aluminum and wood components with tight tolerances. Designed CAM workflows for production runs.",
-      "icon": "cnc.svg",
+      "icon": "assets/Project Icons/Project - CNC.jpg",
       "tags": ["CAM", "Aluminum", "Precision"]
     },
     {
@@ -30,17 +30,32 @@
       "title": "Drone Engineering",
       "type": "making",
       "description": "Designed and built multi-rotor drones with custom electronics integration and autonomous flight capabilities.",
-      "icon": "drone.svg",
+      "icon": "assets/Project Icons/Project - Drones.jpg",
       "tags": ["Electronics", "Flight Control", "Integration"],
       "animation": "orbit"
     },
     {
       "id": "3d-quote-system",
-      "title": "3D Print Quote System",
+      "title": "Missoula 3D Printing Services",
       "type": "software",
       "description": "Web application for quoting and managing 3D print orders with material tracking and inventory management.",
-      "icon": "software.svg",
+      "icon": "assets/Project Icons/Site - 3dPrinter.jpg",
       "tags": ["Node.js", "Database", "SaaS"]
+    },{
+      "id": "mailclerk",
+      "title": "MailClerk",
+      "type": "software",
+      "description": "Web application for managing mail and smart mailboxes for receiving packages",
+      "icon": "",
+      "tags": ["Logistics", "Hardware Development", "Startup"]
+    },
+    {
+      "id": "mailclerk",
+      "title": "Freynet-Gagne Custom Portal",
+      "type": "software",
+      "description": "Web portal for managing Freynet-Gagne customer communication",
+      "icon": "",
+      "tags": ["Laravel", "VueJS", "Client Relations"]
     }
   ]
 }

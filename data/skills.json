@@ -3,7 +3,7 @@
     {
       "id": "software-engineering",
       "title": "Software Engineering",
-      "description": "Full-stack development, PHP, JavaScript, system design",
+      "description": "Full-stack development, business development, system design",
       "icon": "engineering.svg"
     },
     {
@@ -15,7 +15,7 @@
     {
       "id": "cnc-machining",
       "title": "CNC Machining",
-      "description": "CAM programming, precision manufacturing, tool selection",
+      "description": "FreeCad, Fusion 360, CAM Programming,",
       "icon": "hardware.svg"
     },
     {
