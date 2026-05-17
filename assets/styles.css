@@ -123,32 +123,53 @@ body {
     align-items: center;
     justify-content: center;
     padding-top: 80px;
-    text-align: center;
+    padding-bottom: 80px;
     color: var(--white);
     position: relative;
     z-index: 1;
 }
 
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-content {
+    text-align: left;
+}
+
+.hero-graphics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .title {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 800;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     animation: slideDown 0.8s ease-out;
+    line-height: 1.2;
 }
 
 .subtitle {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
     opacity: 0.95;
     animation: slideDown 0.8s ease-out 0.1s backwards;
+    font-weight: 600;
 }
 
 .description {
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin: 0 auto 40px;
+    font-size: 1rem;
+    max-width: 100%;
+    margin: 0 0 40px 0;
     opacity: 0.9;
     animation: slideDown 0.8s ease-out 0.2s backwards;
+    line-height: 1.7;
 }
 
 @keyframes slideDown {
@@ -166,8 +187,8 @@ body {
 .cta-buttons {
     display: flex;
     gap: 20px;
-    justify-content: center;
-    margin-bottom: 60px;
+    justify-content: flex-start;
+    margin-bottom: 0;
     animation: slideDown 0.8s ease-out 0.3s backwards;
 }
 
@@ -208,16 +229,19 @@ body {
 /* Hero Icons */
 .hero-icons {
     display: flex;
-    gap: 30px;
+    flex-direction: column;
+    gap: 40px;
     justify-content: center;
-    margin-top: 60px;
+    align-items: center;
     animation: slideDown 0.8s ease-out 0.4s backwards;
+    width: 100%;
 }
 
 .hero-icon {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     animation: bounce 2s ease-in-out infinite;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
 }
 
 .hero-icon:nth-child(2) {
@@ -305,8 +329,8 @@ body {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 .project-card {
@@ -432,6 +456,29 @@ body {
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+    .hero .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .title {
         font-size: 2.5rem;
@@ -448,10 +495,18 @@ body {
     .cta-buttons {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     .hero-icons {
+        flex-direction: row;
         flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .hero-icon {
+        width: 80px;
+        height: 80px;
     }
 
     .skills h2,
