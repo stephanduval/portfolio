@@ -256,16 +256,22 @@ body {
 .hero-icon {
     width: 120px;
     height: 120px;
-    animation: bounce 2s ease-in-out infinite;
     filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1)) brightness(0) invert(1);
 }
 
+.hero-icon:nth-child(1) {
+    animation: bounce 2s ease-in-out infinite;
+    animation-delay: 0s;
+}
+
 .hero-icon:nth-child(2) {
-    animation-delay: 0.2s;
+    animation: sway 3s ease-in-out infinite;
+    animation-delay: 0s;
 }
 
 .hero-icon:nth-child(3) {
-    animation-delay: 0.4s;
+    animation: orbit 4s ease-in-out infinite;
+    animation-delay: 0s;
 }
 
 @keyframes bounce {
