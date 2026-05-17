@@ -41,6 +41,6 @@
       "description": "Web application for quoting and managing 3D print orders with material tracking and inventory management.",
       "icon": "software.svg",
       "tags": ["Node.js", "Database", "SaaS"]
-    },
+    }
   ]
 }

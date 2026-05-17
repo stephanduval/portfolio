@@ -21,7 +21,7 @@
     {
       "id": "drone-engineering",
       "title": "Drone Engineering",
-      "description": "Design, flight dynamics, component integration, testing",
+      "description": "Fixed Wing Design, Ardupilot, Mission Control, Manufacturing, Design",
       "icon": "drone.svg"
     }
   ]
