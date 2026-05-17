@@ -141,6 +141,22 @@ body {
     text-align: left;
 }
 
+.name-with-portrait {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.portrait {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    flex-shrink: 0;
+    animation: slideDown 0.8s ease-out 0.05s backwards;
+}
+
 .hero-graphics {
     display: flex;
     justify-content: center;
@@ -148,11 +164,11 @@ body {
 }
 
 .title {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     font-weight: 800;
-    margin-bottom: 15px;
+    margin-bottom: 0;
     animation: slideDown 0.8s ease-out;
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 .subtitle {
@@ -462,12 +478,18 @@ body {
         text-align: center;
     }
 
+    .name-with-portrait {
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+
     .cta-buttons {
         justify-content: center;
     }
 
     .title {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .projects-grid {
