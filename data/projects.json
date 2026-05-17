@@ -13,8 +13,9 @@
       "title": "Custom 3D Prints",
       "type": "making",
       "description": "Designed and manufactured custom enclosures, mechanical parts, and prototypes using FDM and resin printing.",
-      "icon": "3d-printing.svg",
-      "tags": ["CAD", "FDM", "Design"]
+      "icon": "nozzle.svg",
+      "tags": ["CAD", "FDM", "Design"],
+      "animation": "sway"
     },
     {
       "id": "cnc-projects",
@@ -30,7 +31,8 @@
       "type": "making",
       "description": "Designed and built multi-rotor drones with custom electronics integration and autonomous flight capabilities.",
       "icon": "drone.svg",
-      "tags": ["Electronics", "Flight Control", "Integration"]
+      "tags": ["Electronics", "Flight Control", "Integration"],
+      "animation": "orbit"
     },
     {
       "id": "3d-quote-system",
@@ -40,13 +42,5 @@
       "icon": "software.svg",
       "tags": ["Node.js", "Database", "SaaS"]
     },
-    {
-      "id": "cms-system",
-      "title": "Content Management",
-      "type": "software",
-      "description": "Custom CMS built with PHP for managing complex content workflows and multi-user collaboration.",
-      "icon": "software.svg",
-      "tags": ["PHP", "MySQL", "REST API"]
-    }
   ]
 }

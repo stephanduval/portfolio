@@ -37,7 +37,7 @@ async function loadProjects() {
 
             projectCard.innerHTML = `
                 <div class="project-icon">
-                    <img src="assets/icons/${project.icon}" alt="${project.title}">
+                    <img src="assets/icons/${project.icon}" alt="${project.title}" class="project-icon-img${project.animation ? ` ${project.animation}` : ''}">
                 </div>
                 <h3>${project.title}</h3>
                 <p class="project-type">${project.type === 'software' ? 'Software Project' : 'Maker Project'}</p>

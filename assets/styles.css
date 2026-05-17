@@ -149,10 +149,10 @@ body {
 }
 
 .portrait {
-    width: 80px;
-    height: 80px;
+    width: 300px;
+    height:300px;
     border-radius: 50%;
-    border: 3px solid rgba(255, 255, 255, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0);
     flex-shrink: 0;
     animation: slideDown 0.8s ease-out 0.05s backwards;
 }
@@ -271,6 +271,19 @@ body {
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
+}
+
+@keyframes sway {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(20px); }
+}
+
+@keyframes orbit {
+    0% { transform: translateY(0) translateX(0); }
+    25% { transform: translateY(-15px) translateX(15px); }
+    50% { transform: translateY(0) translateX(0); }
+    75% { transform: translateY(15px) translateX(-15px); }
+    100% { transform: translateY(0) translateX(0); }
 }
 
 /* Skills Section */
@@ -394,6 +407,14 @@ body {
 
 .project-card:hover .project-icon img {
     transform: scale(1.1);
+}
+
+.project-icon-img.sway {
+    animation: sway 3s ease-in-out infinite;
+}
+
+.project-icon-img.orbit {
+    animation: orbit 4s ease-in-out infinite;
 }
 
 .project-card h3 {
