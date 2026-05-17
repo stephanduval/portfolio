@@ -155,6 +155,7 @@ body {
     border: 3px solid rgba(255, 255, 255, 0);
     flex-shrink: 0;
     animation: slideDown 0.8s ease-out 0.05s backwards;
+    filter: brightness(0) saturate(100%) invert(100%);
 }
 
 .hero-graphics {
