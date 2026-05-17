@@ -1,3 +1,64 @@
+// Load and render skills from JSON
+async function loadSkills() {
+    try {
+        const response = await fetch('data/skills.json');
+        const data = await response.json();
+        const skillsGrid = document.getElementById('skillsGrid');
+
+        data.skills.forEach(skill => {
+            const skillCard = document.createElement('div');
+            skillCard.className = 'skill-card';
+            skillCard.innerHTML = `
+                <img src="assets/icons/${skill.icon}" alt="${skill.title}" class="skill-icon">
+                <h3>${skill.title}</h3>
+                <p>${skill.description}</p>
+            `;
+            skillsGrid.appendChild(skillCard);
+        });
+    } catch (error) {
+        console.error('Error loading skills:', error);
+    }
+}
+
+// Load and render projects from JSON
+async function loadProjects() {
+    try {
+        const response = await fetch('data/projects.json');
+        const data = await response.json();
+        const projectsGrid = document.getElementById('projectsGrid');
+
+        data.projects.forEach(project => {
+            const projectCard = document.createElement('div');
+            projectCard.className = `project-card ${project.type}`;
+
+            const tagsHTML = project.tags
+                .map(tag => `<span>${tag}</span>`)
+                .join('');
+
+            projectCard.innerHTML = `
+                <div class="project-icon">
+                    <img src="assets/icons/${project.icon}" alt="${project.title}">
+                </div>
+                <h3>${project.title}</h3>
+                <p class="project-type">${project.type === 'software' ? 'Software Project' : 'Maker Project'}</p>
+                <p>${project.description}</p>
+                <div class="project-tags">
+                    ${tagsHTML}
+                </div>
+            `;
+            projectsGrid.appendChild(projectCard);
+        });
+    } catch (error) {
+        console.error('Error loading projects:', error);
+    }
+}
+
+// Load data on page load
+document.addEventListener('DOMContentLoaded', () => {
+    loadSkills();
+    loadProjects();
+});
+
 // Smooth scroll for nav links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -24,13 +85,15 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe skill cards and project cards
-document.querySelectorAll('.skill-card, .project-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
-});
+// Observe skill cards and project cards after they're loaded
+setTimeout(() => {
+    document.querySelectorAll('.skill-card, .project-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+}, 100);
 
 // Add parallax effect to hero icons on scroll
 window.addEventListener('scroll', () => {
@@ -55,4 +118,4 @@ window.addEventListener('scroll', () => {
     }
 });
 
-console.log('Portfolio site loaded with interactive features');
+console.log('Portfolio site loaded with data-driven content');

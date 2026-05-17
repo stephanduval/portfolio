@@ -1,0 +1,28 @@
+{
+  "skills": [
+    {
+      "id": "software-engineering",
+      "title": "Software Engineering",
+      "description": "Full-stack development, PHP, JavaScript, system design",
+      "icon": "engineering.svg"
+    },
+    {
+      "id": "3d-printing",
+      "title": "3D Printing",
+      "description": "Design, prototyping, material selection, troubleshooting",
+      "icon": "manufacturing.svg"
+    },
+    {
+      "id": "cnc-machining",
+      "title": "CNC Machining",
+      "description": "CAM programming, precision manufacturing, tool selection",
+      "icon": "hardware.svg"
+    },
+    {
+      "id": "drone-engineering",
+      "title": "Drone Engineering",
+      "description": "Design, flight dynamics, component integration, testing",
+      "icon": "drone.svg"
+    }
+  ]
+}

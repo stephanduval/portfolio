@@ -241,7 +241,7 @@ body {
     width: 120px;
     height: 120px;
     animation: bounce 2s ease-in-out infinite;
-    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1)) brightness(0) invert(1);
 }
 
 .hero-icon:nth-child(2) {
@@ -301,12 +301,12 @@ body {
     width: 60px;
     height: 60px;
     margin: 0 auto 20px;
-    color: var(--primary);
-    transition: color 0.3s ease;
+    filter: brightness(0) saturate(100%) invert(20%) sepia(84%) saturate(1205%) hue-rotate(234deg) brightness(99%) contrast(92%);
+    transition: filter 0.3s ease;
 }
 
 .skill-card:hover .skill-icon {
-    color: var(--secondary);
+    filter: brightness(0) saturate(100%) invert(27%) sepia(49%) saturate(1339%) hue-rotate(259deg) brightness(97%) contrast(93%);
 }
 
 .skill-card h3 {
@@ -369,18 +369,14 @@ body {
     background: linear-gradient(135deg, rgba(78, 205, 196, 0.1), rgba(255, 230, 109, 0.1));
 }
 
-.project-icon svg {
+.project-icon img {
     width: 100px;
     height: 100px;
-    color: var(--primary);
-    transition: color 0.3s ease;
+    filter: brightness(0) saturate(100%) invert(100%);
+    transition: transform 0.3s ease;
 }
 
-.project-card.making .project-icon svg {
-    color: var(--accent-2);
-}
-
-.project-card:hover .project-icon svg {
+.project-card:hover .project-icon img {
     transform: scale(1.1);
 }
 

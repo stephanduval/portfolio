@@ -1,0 +1,52 @@
+{
+  "projects": [
+    {
+      "id": "wrioter",
+      "title": "Wrioter",
+      "type": "software",
+      "description": "Laravel/Vue.js content management and workflow platform with real-time collaboration features.",
+      "icon": "software.svg",
+      "tags": ["PHP", "Vue.js", "Laravel"]
+    },
+    {
+      "id": "3d-prints",
+      "title": "Custom 3D Prints",
+      "type": "making",
+      "description": "Designed and manufactured custom enclosures, mechanical parts, and prototypes using FDM and resin printing.",
+      "icon": "3d-printing.svg",
+      "tags": ["CAD", "FDM", "Design"]
+    },
+    {
+      "id": "cnc-projects",
+      "title": "CNC Projects",
+      "type": "making",
+      "description": "Machined aluminum and wood components with tight tolerances. Designed CAM workflows for production runs.",
+      "icon": "cnc.svg",
+      "tags": ["CAM", "Aluminum", "Precision"]
+    },
+    {
+      "id": "drone-engineering",
+      "title": "Drone Engineering",
+      "type": "making",
+      "description": "Designed and built multi-rotor drones with custom electronics integration and autonomous flight capabilities.",
+      "icon": "drone.svg",
+      "tags": ["Electronics", "Flight Control", "Integration"]
+    },
+    {
+      "id": "3d-quote-system",
+      "title": "3D Print Quote System",
+      "type": "software",
+      "description": "Web application for quoting and managing 3D print orders with material tracking and inventory management.",
+      "icon": "software.svg",
+      "tags": ["Node.js", "Database", "SaaS"]
+    },
+    {
+      "id": "cms-system",
+      "title": "Content Management",
+      "type": "software",
+      "description": "Custom CMS built with PHP for managing complex content workflows and multi-user collaboration.",
+      "icon": "software.svg",
+      "tags": ["PHP", "MySQL", "REST API"]
+    }
+  ]
+}
