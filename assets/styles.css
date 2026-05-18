@@ -138,6 +138,24 @@ body {
     stroke-width: 2.5;
 }
 
+.copy-btn {
+    padding: 14px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copy-icon {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
+}
+
+.copy-btn.copied {
+    background: #4CAF50;
+    border-color: #4CAF50;
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
