@@ -22,6 +22,19 @@ EXCLUDES=(
   "--exclude=.env"
 )
 
+echo "🚀 Building resume..."
+if command -v pdflatex &> /dev/null; then
+    cd assets/Resume
+    pdflatex -interaction=nonstopmode -output-directory=. "20230501 Stephan DuVal Resume.tex" > /dev/null 2>&1
+    pdflatex -interaction=nonstopmode -output-directory=. "20230501 Stephan DuVal Resume.tex" > /dev/null 2>&1
+    cd ../..
+    mv "assets/Resume/20230501 Stephan DuVal Resume.pdf" "assets/resume.pdf" 2>/dev/null || true
+    echo "✅ Resume compiled to PDF"
+else
+    echo "⚠️  pdflatex not found, skipping resume build"
+fi
+
+echo ""
 echo "🚀 Deploying to portfolio.stephandouglasduval.com"
 echo "Server: $REMOTE_HOST"
 echo "Path: $REMOTE_PATH"
