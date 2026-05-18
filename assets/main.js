@@ -119,21 +119,26 @@ window.addEventListener('scroll', () => {
 });
 
 // Copy email to clipboard
-document.getElementById('copyEmail').addEventListener('click', function() {
-    const email = 'portfolio.stephandou@mail.stephandouglasduval.com';
-    navigator.clipboard.writeText(email).then(() => {
-        const btn = this;
-        const originalTitle = btn.title;
-        btn.title = 'Copied!';
-        btn.classList.add('copied');
+document.addEventListener('DOMContentLoaded', () => {
+    const copyBtn = document.getElementById('copyEmail');
+    if (copyBtn) {
+        copyBtn.addEventListener('click', function() {
+            const email = 'portfolio.stephandou@mail.stephandouglasduval.com';
+            navigator.clipboard.writeText(email).then(() => {
+                const btn = this;
+                const originalTitle = btn.title;
+                btn.title = 'Copied!';
+                btn.classList.add('copied');
 
-        setTimeout(() => {
-            btn.title = originalTitle;
-            btn.classList.remove('copied');
-        }, 2000);
-    }).catch(err => {
-        console.error('Failed to copy email:', err);
-    });
+                setTimeout(() => {
+                    btn.title = originalTitle;
+                    btn.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy email:', err);
+            });
+        });
+    }
 });
 
 console.log('Portfolio site loaded with data-driven content');
