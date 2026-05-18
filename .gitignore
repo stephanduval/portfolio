@@ -9,3 +9,9 @@ storage/
 *.swp
 *.swo
 *~
+
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.pdf
