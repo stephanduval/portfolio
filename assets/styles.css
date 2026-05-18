@@ -143,10 +143,7 @@ body {
 }
 
 .drone-icon-top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-bottom: 30px;
+    display: none;
 }
 
 .drone-top {
@@ -154,6 +151,10 @@ body {
     height: 80px;
     filter: brightness(0.3) drop-shadow(0 5px 15px rgba(0, 0, 0, 0.15));
     animation: orbit 4s ease-in-out infinite;
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .name-with-portrait {
@@ -161,6 +162,11 @@ body {
     align-items: center;
     gap: 30px;
     margin-bottom: 20px;
+}
+
+.portrait-wrapper {
+    position: relative;
+    display: inline-block;
 }
 
 .portrait {
