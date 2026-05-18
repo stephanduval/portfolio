@@ -139,6 +139,21 @@ body {
 
 .hero-content {
     text-align: left;
+    position: relative;
+}
+
+.drone-icon-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-bottom: 30px;
+}
+
+.drone-top {
+    width: 80px;
+    height: 80px;
+    filter: brightness(0.3) drop-shadow(0 5px 15px rgba(0, 0, 0, 0.15));
+    animation: orbit 4s ease-in-out infinite;
 }
 
 .name-with-portrait {
