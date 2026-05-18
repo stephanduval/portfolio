@@ -110,10 +110,32 @@ body {
     color: var(--text);
     font-weight: 500;
     transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .nav-menu a:hover {
     color: var(--primary);
+}
+
+.resume-link {
+    background: #333333;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.resume-link:hover {
+    background: #555555;
+    transform: translateY(-2px);
+}
+
+.download-icon {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2.5;
 }
 
 /* Hero Section */
@@ -153,7 +175,7 @@ body {
     animation: orbit 4s ease-in-out infinite;
     position: absolute;
     top: -80px;
-    left: 50%;
+    left: 0px;
     transform: translateX(-50%);
 }
 

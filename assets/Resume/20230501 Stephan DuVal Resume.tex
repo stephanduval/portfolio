@@ -1,0 +1,349 @@
+%-------------------------
+% Resume in Latex
+% Author : Abey George
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+ \usepackage{setspace}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\RequirePackage{fontawesome}
+\usepackage{tikz}
+\usetikzlibrary{svg.path}
+
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+
+
+%----------FONT OPTIONS in
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+% \pagestyle{fancy}
+% \fancyhf{}  % clear all header and footer fields
+% \fancyfoot{}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{0pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\large#3} & \textit{\small #4} \\
+      
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+
+
+\begin{center}
+    {\Huge \scshape Stephan Douglas DuVal} \\ \vspace{1pt}
+
+    \small
+    \href{tel:+17787883800}{ \raisebox{-0.1\height}\faPhone\ \underline{+1-778-788-3800} ~} \href{mailto:stephan.duval@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{stephan.duval@gmail.com}} ~
+    \href{https://www.linkedin.com/in/stephanduval/}{\raisebox{-0.2\height}\faLinkedinSquare\ \underline{Stephan DuVal}}  ~
+    \href{https://github.com/stephanduval}{\raisebox{-0.2\height}\faGithub\ \underline{stephanduval}} ~
+    \setstretch{1.25}
+
+    \href{https://stephan-duval-developer.vercel.app/}{\raisebox{-0.2\height}\faUser\  \underline{Resume Website}} ~
+
+
+
+
+
+
+\end{center}
+
+\hspace{20 mm}
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+\resumeSubHeadingListStart
+\resumeSubheading
+{University of Alberta}{JAN 2003 -- AUG 2007}
+{\textbf{BA English} - \textbf{Film}}{Edmonton,Alberta}
+
+\resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+\resumeSubheading
+{Certifications}
+
+
+
+{\textbf{}\textbf{}}{}
+\resumeSubHeadingListEnd
+\end{comment}
+
+
+$\sbullet[.75] \hspace{0.1cm}$ {\href{certificateLink.com}{Introduction to CS - MITx}} \hspace{1.6cm}
+$\sbullet[.75] \hspace{0.1cm}$ {\href{certificateLink.com}{ReactJS \& Redux - Udemy}} \hspace{1.6cm}
+$\sbullet[.75] \hspace{0.1cm}$ {\href{certificateLink.com}{JS Fullstack Developer - Udemy}} \hspace{1.6cm}
+$\sbullet[.75] \hspace{0.2cm}${\href{certificateLink.com} {Git Masterclass - Udemy}} \hspace{1.6cm}
+
+\hspace{5 mm}
+
+%------RELEVANT COURSEWORK-------
+\section{SKILLS}
+%\resumeSubHeadingListStart
+\begin{multicols}{4}
+    \begin{itemize}[itemsep=-2pt, parsep=5pt]
+        \item Software Development
+        \item Project Completion
+        \item Leadership
+        \item Team Management
+        \item Creativity
+        \item Client Relations
+    \end{itemize}
+\end{multicols}
+\vspace*{2.0\multicolsep}
+%\resumeSubHeadingListEnd
+
+\hspace{5mm}
+
+%-----------PROJECTS-----------
+\section{EXPERIENCE}
+\setstretch{1.25}
+
+
+\vspace{0pt}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\href{https://n-back-experiment.herokuapp.com/}{\textbf{\large{{Customer Service Representative - Manulife Insurance}}} \href{https://n-back-experiment.herokuapp.com/}{\raisebox{-0.1=\height}\faExternalLink }} $|$ {\underline{React/Redux}}}{Dec 2022 - Ongoing}
+\resumeItemListStart
+\resumeItem{\normalsize{I manage customer relationships for Manulife's Group Insurance customers in French and English. I handle a changing portfolio of accounts each with specific needs.  I keep up to date on Employer specific insurance policies with specific considerations understanding medical systems, confidentiality and navigating the bureucracy of our providers.  Core competency in a broad spectrum of office software is involed.}}
+
+\resumeItem{\textcolor{accent} {\href{https://n-back-experiment.herokuapp.com/} {\underline{\normalsize{Live site here}}}}}
+\resumeItemListEnd
+\vspace{0pt}
+
+\vspace{0pt}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\href{https://n-back-experiment.herokuapp.com/}{\textbf{\large{{Lead Developer - Cognitive Research Project}}} \href{https://n-back-experiment.herokuapp.com/}{\raisebox{-0.1=\height}\faExternalLink }} $|$ {\underline{React/Redux}}}{JUN 2021 - Nov 2022}
+\resumeItemListStart
+\resumeItem{\normalsize{An approved doctoral thesis research project hosted by the University of Missoula. Used Redux and React Hooks to create an interactive site that logs user input and their response to visual stimuli as they navigate the website.  User activity was logged for data processing as part of the research project.  The project was successful in gathering new categories of timing data which pivoted the thesis project. Client asked for two new tests to be developed.}}
+
+\resumeItem{\textcolor{accent} {\href{https://n-back-experiment.herokuapp.com/} {\underline{\normalsize{Live site here}}}}}
+\resumeItemListEnd
+\vspace{0pt}
+
+\resumeProjectHeading
+{\href{https://mailclerk.com/}{\textbf{\large{{Founder and Director - MailClerk.com}}} \href{https://mailclerk.com/}{\raisebox{-0.1\height}\faExternalLink }} $|$ {\underline{PHP/Symfony/Stripe/mySQL}}}{FEB	2021}
+\resumeItemListStart
+\resumeItem{\normalsize{MailClerk.com provides software for SMBs in the mail handling field to manage their customers mail and accounts.  It tracks mail through multiple kinds of customer requests and provide an online wallet with automatic billing for specific services. Integrated with Notarize.com's API for customer validation. }
+    \resumeItem{\textcolor{accent} {\href{https://mailclerk.com/} {\underline{\normalsize{Live site here}}}}}
+    \resumeItemListEnd
+    \vspace{0pt}
+
+
+    \resumeProjectHeading
+    {{\textbf{\large{{Project Designer  - Maple Film Supply Voltage Tx}}}} $|$ {\underline{React/Electron/C++/Integrated Circuit}}}{AUG 2020}
+    \resumeItemListStart
+    \resumeItem{\normalsize{Built a MVP transmitter that allows a user to monitor the voltage of multiple devices on an Android app.  \textbf{Designed the overall project and recruited volunteers} }}
+
+    \resumeItemListEnd
+    \vspace{0pt}
+    \pagebreak
+
+    \resumeProjectHeading
+    {{\textbf{\large{{Software \& Hardware Team Lead - LayoverBox.com}}}} $|$ {\underline{React/Electron/RS-232/mySQL}}}{AUG 2016 - June 2020}
+    \resumeItemListStart
+    \resumeItem{\normalsize{Built a MVP mailbox with the UBC Electrical Engineering program's Capstone Project.  The mailbox was part of a integrated service that provided an address and parcel storage receiving parcels from couriers without the need for a human clerk.  SouthCo Lock Integration uses RS232, React Electron local app. Product successfully served over a hundred customers before the business closed down because the founder had other priorities. \textbf{Led both the software and hardware engineering teams and chose the tech stack} }}
+
+    \resumeItemListEnd
+    \vspace{0pt}
+
+
+    \resumeProjectHeading
+    {\href{https://www.esnail.ca/}{\textbf{\large{{Founder and Director - eSnail.ca}}} \href{https://www.esnail.ca/}{\raisebox{-0.1\height}\faExternalLink }} $|$ {\underline{PHP/Kohanna/Moneris/mySQL}}}{FEB	2008 - ongoing}
+    \resumeItemListStart
+    \resumeItem{\normalsize{eSnail.ca  provides individuals individuals with software to view their mail online.   In business since 2008 and still operates a service for a small number of clients. \textbf{Acted as the Founder and Director of the Company from 2008 - ongoing }
+        }}
+    \resumeItem{\textcolor{accent} {\href{https://www.esnail.ca/} {\underline{\normalsize{Live site here}}}}}
+    \resumeItemListEnd
+    \vspace{0pt}
+
+
+    \resumeSubHeadingListEnd
+    \vspace{0pt}
+
+    \end{singlespace}
+    \resumeProjectHeading
+
+
+    %
+
+
+    %-----------EXPERIENCE-----------
+    \section{EXPERIENCE}
+    \setstretch{1.25}
+
+    \resumeSubHeadingListStart
+
+    \resumeSubheading
+    {MailClerk.com}{JUNE 2020 -- present}
+    {\underline{Director}}{Missoula, MT}
+    \resumeItemListStart
+    \resumeItem{\normalsize{Designed and launched the US-based MailClerk.com. {Handled the design of the application and integration of API services. Responsible for the management of daily business affairs, contracts and employees.}}}}
+
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{0pt}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{eSnail.ca Automated Mail Systems Canada Inc.}{MAY 2008 -- present}
+{\underline{Director}}{Vancouver, Canada}
+\resumeItemListStart
+\resumeItem{\normalsize{Acted as the director of the company as I operated eSnail.ca and a successful career in as a focus puller in the film industry. \textbf{Managed three franchises in three different cities and two employees. Handled taxes and payroll as well as upgrading the software and managing three part time employees. }}}
+
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{0pt}
+\end{singlespace}
+
+%-----------PROGRAMMING SKILLS-----------
+\section{TECHNICAL SKILLS}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+                    \textbf{\normalsize{Languages:}}{ \normalsize{Python, JavaScript, SQL, PHP}} \\
+                    \textbf{\normalsize{Developer Tools:}}{ \normalsize{VS Code, Android Studio}} \\
+                    \textbf{\normalsize{Technologies/Frameworks:}}{\normalsize{ Bash,Git, ReactJS, Redux, Heroku, AWS, React Native, React with Electron, Postman, Vercel}} \\
+              }}
+\end{itemize}
+\vspace{0pt}
+
+
+
+%-----------INVOLVEMENT---------------
+\section{EXTRACURRICULAR}
+\resumeSubHeadingListStart
+\resumeSubheading{Writing }{}{\underline{}}{}
+\resumeItemListStart
+\resumeItem{\normalsize{Writing short stories for my daughter \textbf{}}}
+
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{0pt}
+
+%-----------CERTIFICATIONS---------------
+
+
+
+
+
+\end{document}
+

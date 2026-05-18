@@ -1,0 +1,47 @@
+name: Build and Deploy Resume
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'assets/Resume/**'
+      - '.github/workflows/build-resume.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Install LaTeX
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-fonts-recommended
+
+    - name: Compile LaTeX to PDF
+      run: |
+        cd assets/Resume
+        pdflatex -interaction=nonstopmode -output-directory=. "20230501 Stephan DuVal Resume.tex"
+        # Run twice to resolve references
+        pdflatex -interaction=nonstopmode -output-directory=. "20230501 Stephan DuVal Resume.tex"
+
+    - name: Move PDF to assets
+      run: |
+        mv "assets/Resume/20230501 Stephan DuVal Resume.pdf" "assets/resume.pdf"
+
+    - name: Commit and push PDF
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add assets/resume.pdf
+        git commit -m "Auto-build: compile resume to PDF" || echo "No changes to commit"
+        git push
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: resume-pdf
+        path: assets/resume.pdf
