@@ -1,13 +1,13 @@
 :root {
-    --primary: #667eea;
-    --secondary: #764ba2;
-    --accent: #ff6b6b;
-    --accent-2: #4ecdc4;
-    --accent-3: #ffe66d;
-    --text: #1a1a1a;
-    --text-light: #666;
-    --bg-light: #f8f9fa;
-    --white: #ffffff;
+    --primary: #333333;
+    --secondary: #555555;
+    --accent: #999999;
+    --accent-2: #777777;
+    --accent-3: #cccccc;
+    --text: #ffffff;
+    --text-light: #cccccc;
+    --bg-light: #ffffff;
+    --white: #000000;
 }
 
 * {
@@ -124,7 +124,7 @@ body {
     justify-content: center;
     padding-top: 80px;
     padding-bottom: 80px;
-    color: var(--white);
+    color: #000000;
     position: relative;
     z-index: 1;
 }
@@ -152,10 +152,9 @@ body {
     width: 300px;
     height:300px;
     border-radius: 50%;
-    border: 3px solid rgba(255, 255, 255, 0);
+    border: 3px solid rgba(0, 0, 0, 0.2);
     flex-shrink: 0;
     animation: slideDown 0.8s ease-out 0.05s backwards;
-    filter: brightness(0) saturate(100%) invert(100%);
 }
 
 .hero-graphics {
@@ -222,25 +221,27 @@ body {
 }
 
 .btn-primary {
-    background: var(--white);
-    color: var(--primary);
-    border-color: var(--white);
+    background: #333333;
+    color: #ffffff;
+    border-color: #333333;
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background: #555555;
+    border-color: #555555;
 }
 
 .btn-secondary {
     background: transparent;
-    color: var(--white);
-    border-color: var(--white);
+    color: #333333;
+    border-color: #333333;
 }
 
 .btn-secondary:hover {
-    background: var(--white);
-    color: var(--primary);
+    background: #333333;
+    color: #ffffff;
 }
 
 /* Hero Icons */
@@ -257,7 +258,7 @@ body {
 .hero-icon {
     width: 120px;
     height: 120px;
-    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1)) brightness(0) invert(1);
+    filter: brightness(0.3) drop-shadow(0 5px 15px rgba(0, 0, 0, 0.15));
 }
 
 .hero-icon:nth-child(1) {
@@ -295,6 +296,7 @@ body {
 
 /* Skills Section */
 .skills {
+    display: none;
     padding: 120px 0;
     background: var(--bg-light);
     position: relative;
@@ -358,6 +360,7 @@ body {
 
 /* Projects Section */
 .projects {
+    display: none;
     padding: 120px 0;
     position: relative;
     z-index: 2;
