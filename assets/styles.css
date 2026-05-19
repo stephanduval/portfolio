@@ -99,6 +99,11 @@ body {
     background-clip: text;
 }
 
+.emoji {
+    font-size: 1.5rem;
+    margin-left: 4px;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -173,10 +178,6 @@ body {
 .hero-content {
     text-align: left;
     position: relative;
-}
-
-.drone-icon-top {
-    display: none;
 }
 
 .drone-top {
@@ -580,14 +581,14 @@ body {
 
 /* Footer */
 .footer {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    /* background: linear-gradient(180deg, var(--bg-light) 70%, var(--accent-3) 100%); */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0)) 0%, var(--accent-3) 100%);
     color: var(--white);
     text-align: center;
     padding: 30px;
     position: relative;
     z-index: 2;
 }
-
 /* Responsive */
 @media (max-width: 1024px) {
     .hero .container {
@@ -663,4 +664,9 @@ body {
         gap: 15px;
         font-size: 0.9rem;
     }
+
+    .logo .emoji {
+    font-family: system-ui, -apple-system, sans-serif;
+    filter: brightness(1.2);
+}
 }
