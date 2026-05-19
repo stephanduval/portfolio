@@ -15,3 +15,6 @@ storage/
 *.log
 *.out
 *.pdf
+
+# Development files
+development files/

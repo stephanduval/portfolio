@@ -183,7 +183,7 @@ body {
     width: 80px;
     height: 80px;
     filter: brightness(0.3) drop-shadow(0 5px 15px rgba(0, 0, 0, 0.15));
-    animation: orbit 4s ease-in-out infinite;
+    animation: orbit 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
     position: absolute;
     top: -80px;
     left: 0px;
@@ -195,16 +195,18 @@ body {
     align-items: center;
     gap: 30px;
     margin-bottom: 20px;
+    padding-top: 5rem;
 }
 
 .portrait-wrapper {
     position: relative;
     display: inline-block;
     overflow: visible;
+    padding-top: 25px;
 }
 
 .portrait {
-    width: 300px;
+    width: 260px;
     height: auto;
     flex-shrink: 0;
     animation: slideDown 0.8s ease-out 0.05s backwards;
@@ -254,14 +256,16 @@ body {
 
 /* CTA Buttons */
 .button-group {
-    display: inline-flex;
+    display: flex;
     gap: 0;
     align-items: stretch;
+    width: fit-content;
+    margin: 0 auto;
     animation: slideDown 0.8s ease-out 0.3s backwards;
 }
 
 .btn {
-    padding: 14px 28px;
+    padding: 12px 20px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
@@ -287,7 +291,7 @@ body {
 
 .button-group .btn:last-child {
     border-radius: 0 8px 8px 0;
-    padding: 14px 14px;
+    padding: 12px 12px;
 }
 
 .btn-primary {
@@ -332,17 +336,17 @@ body {
 }
 
 .hero-icon:nth-child(1) {
-    animation: bounce 2s ease-in-out infinite;
+    animation: bounce 2s cubic-bezier(0.42, 0, 0.58, 1) infinite;
     animation-delay: 0s;
 }
 
 .hero-icon:nth-child(2) {
-    animation: sway 3s ease-in-out infinite;
+    animation: sway 3s cubic-bezier(0.42, 0, 0.58, 1) infinite;
     animation-delay: 0s;
 }
 
 .hero-icon:nth-child(3) {
-    animation: orbit 4s ease-in-out infinite;
+    animation: orbit 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
     animation-delay: 0s;
 }
 
@@ -357,11 +361,27 @@ body {
 }
 
 @keyframes orbit {
-    0% { transform: translateY(0) translateX(0); }
-    25% { transform: translateY(-15px) translateX(15px); }
-    50% { transform: translateY(0) translateX(0); }
-    75% { transform: translateY(15px) translateX(-15px); }
-    100% { transform: translateY(0) translateX(0); }
+    0% { transform: translateY(-40px) translateX(50px); }
+    /* 5% { transform: translateY(-8px) translateX(8px); }
+    10% { transform: translateY(-15px) translateX(15px); }
+    15% { transform: translateY(-8px) translateX(8px); }
+    20% { transform: translateY(0) translateX(0); } */
+    25% { transform: translateY(45px) translateX(20px); }
+    /* 30% { transform: translateY(15px) translateX(-15px); }
+    35% { transform: translateY(15px) translateX(-10px); }
+    40% { transform: translateY(15px) translateX(-15px); }
+    45% { transform: translateY(15px) translateX(0); } */
+    50% { transform: translateY(35px) translateX(50px); }
+    /* 55% { transform: translateY(8px) translateX(15px); }
+    60% { transform: translateY(-15px) translateX(15px); }
+    65% { transform: translateY(-8px) translateX(8px); }
+    70% { transform: translateY(0) translateX(0); } */
+    75% { transform: translateY(0px) translateX(65px); }
+    /* 80% { transform: translateY(15px) translateX(-15px); }
+    85% { transform: translateY(8px) translateX(-8px); }
+    90% { transform: translateY(0) translateX(0); }
+    95% { transform: translateY(-5px) translateX(5px); } */
+    100% { transform: translateY(-40px) translateX(50px); }
 }
 
 /* Skills Section */
@@ -494,7 +514,7 @@ body {
 }
 
 .project-icon-img.orbit {
-    animation: orbit 4s ease-in-out infinite;
+    animation: orbit 10s linear infinite;
 }
 
 .project-card h3 {
@@ -583,10 +603,6 @@ body {
         justify-content: center;
         flex-direction: column;
         margin-bottom: 25px;
-    }
-
-    .button-group {
-        justify-content: center;
     }
 
     .title {
