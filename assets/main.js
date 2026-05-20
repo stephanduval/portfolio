@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const copyBtn = document.getElementById('copyEmail');
     if (copyBtn) {
         copyBtn.addEventListener('click', function() {
-            const email = 'portfolio.stephandou@mail.stephandouglasduval.com';
+            const email = 'applications@mail.stephandouglasduval.com';
             navigator.clipboard.writeText(email).then(() => {
                 const btn = this;
                 const originalTitle = btn.title;

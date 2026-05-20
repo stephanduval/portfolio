@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.5.18)  18 MAY 2026 18:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.5.18)  19 MAY 2026 01:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -670,36 +670,6 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 zlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
-
-! Package fontawesome5 Error: Incompatible version of Font Awesome already
-(fontawesome5)                loaded
-
-For immediate help type H <return>.
- ...                                              
-                                                  
-l.32 \usepackage
-                {tikz}
-
-You tried to load the fontawesome5 package but there are already some icons
-from Font Awesome defined in your document. This probably means that a package
-for another version of Font Awesome (likely the fontawesome package for Font
-Awesome 4) is already loaded. Loading multiple versions is not supported.
-Please remove all but one version of Font Awesome from your document.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/fontawesome/fontawesome.sty
-Package: fontawesome 2016/05/15 v4.6.3.1 font awesome icons
-
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty
-Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-generic
-.tex)
-(/usr/share/texlive/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-pdftex.
-tex))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarysvg.path.code.tex
 File: tikzlibrarysvg.path.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -721,24 +691,24 @@ File: pgfmoduleparser.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )) (./20230501 Stephan DuVal Resume.aux)
 \openout1 = `"20230501 Stephan DuVal Resume.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -762,235 +732,111 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 147.
+Package hyperref Info: Link coloring OFF on input line 152.
 
 (./20230501 Stephan DuVal Resume.out) (./20230501 Stephan DuVal Resume.out)
 \@outlinefile=\write4
 \openout4 = `"20230501 Stephan DuVal Resume.out"'.
 
-LaTeX Font Info:    Trying to load font information for U+fontawesometwo on inp
-ut line 156.
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on i
+nput line 161.
 
-(/usr/share/texlive/texmf-dist/tex/latex/fontawesome/ufontawesometwo.fd
-File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
-)
+(/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/ufontawesomefree2.fd)
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 156.
+(Font)              <7> on input line 161.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 156.
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 15
-6.
+(Font)              <5> on input line 161.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 16
+1.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+fontawesomethree on i
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on i
 nput line 161.
 
-(/usr/share/texlive/texmf-dist/tex/latex/fontawesome/ufontawesomethree.fd
-File: ufontawesomethree.fd 2016/05/22 Font definitions for U/fontawesomethree.
-)
+(/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/ufontawesomefree1.fd)
+LaTeX Font Info:    Trying to load font information for U+fontawesomebrands0 on
+ input line 162.
+
+(/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/ufontawesomebrands0.fd)
+LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <10> not 
+available
+(Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
+n input line 162.
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree3 on i
+nput line 166.
+
+(/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/ufontawesomefree3.fd)
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
-(Font)              using `OT1/cmr/bx/n' instead on input line 173.
+(Font)              using `OT1/cmr/bx/n' instead on input line 178.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 177.
+(Font)              <10.95> on input line 182.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 177.
+(Font)              <8> on input line 182.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 177.
-Runaway argument?
-{\small 
-! Paragraph ended before \text@command was complete.
-<to be read again> 
-                   \par 
-l.185 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+(Font)              <6> on input line 182.
 
-! Extra }, or forgotten \endgroup.
-<recently read> \egroup 
-                        
-l.185 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-Runaway argument?
-{\large 
-! Paragraph ended before \text@command was complete.
-<to be read again> 
-                   \par 
-l.185 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Extra }, or forgotten \endgroup.
-<recently read> \egroup 
-                        
-l.185 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-Runaway argument?
-{\small 
-! Paragraph ended before \text@command was complete.
-<to be read again> 
-                   \par 
-l.185 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Extra }, or forgotten \endgroup.
-<recently read> \egroup 
-                        
-l.185 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-! LaTeX Error: \begin{document} ended by \end{comment}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.188 \end{comment}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Extra \endgroup.
-\end  ...end#1\endcsname \@checkend {#1}\endgroup 
-                                                  \UseHook {env/#1/after}\if...
-l.188 \end{comment}
-                   
-Things are pretty mixed up, but I think the worst is over.
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   =
-l.224 ...erline{React/Redux}}}{Dec 2022 - Ongoing}
-                                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \relax 
-l.224 ...erline{React/Redux}}}{Dec 2022 - Ongoing}
-                                                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.224 ...erline{React/Redux}}}{Dec 2022 - Ongoing}
-                                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-
-Overfull \hbox (0.55968pt too wide) in paragraph at lines 224--226
-[]  
- []
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   =
-l.235 ...rline{React/Redux}}}{JUN 2021 - Nov 2022}
-                                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \relax 
-l.235 ...rline{React/Redux}}}{JUN 2021 - Nov 2022}
-                                                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.235 ...rline{React/Redux}}}{JUN 2021 - Nov 2022}
-                                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-
-Overfull \hbox (0.55968pt too wide) in paragraph at lines 235--237
+Overfull \hbox (0.55968pt too wide) in paragraph at lines 220--222
 []  
  []
 
 
-Overfull \hbox (0.55968pt too wide) in paragraph at lines 244--246
+Package hyperref Warning: Suppressing link with empty target on input line 229.
+
+
+
+Package hyperref Warning: Suppressing link with empty target on input line 229.
+
+
+
+Overfull \hbox (0.55968pt too wide) in paragraph at lines 229--231
 []  
  []
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.300 ...ess affairs, contracts and employees.}}}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.300 ...ess affairs, contracts and employees.}}}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+Package hyperref Warning: Suppressing link with empty target on input line 239.
 
 
-Overfull \hbox (0.55968pt too wide) in paragraph at lines 300--300
+
+Package hyperref Warning: Suppressing link with empty target on input line 239.
+
+
+
+Overfull \hbox (0.55968pt too wide) in paragraph at lines 239--241
+[]  
+ []
+
+
+Package hyperref Warning: Suppressing link with empty target on input line 248.
+
+
+
+Package hyperref Warning: Suppressing link with empty target on input line 248.
+
+
+
+Overfull \hbox (0.55968pt too wide) in paragraph at lines 248--250
+[]  
+ []
+
+
+Package hyperref Warning: Suppressing link with empty target on input line 259.
+
+
+
+Package hyperref Warning: Suppressing link with empty target on input line 259.
+
+
+
+Overfull \hbox (0.55968pt too wide) in paragraph at lines 259--261
+[]  
+ []
+
+
+Overfull \hbox (0.55968pt too wide) in paragraph at lines 273--275
 []  
  []
 
@@ -999,127 +845,38 @@ Overfull \hbox (0.55968pt too wide) in paragraph at lines 300--300
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
-st/fonts/enc/dvips/fontawesome/fontawesometwo.enc}{/usr/share/texlive/texmf-dis
-t/fonts/enc/dvips/fontawesome/fontawesomethree.enc}{/usr/share/texmf/fonts/enc/
-dvips/cm-super/cm-super-ts1.enc}]
-Overfull \hbox (17.55856pt too wide) in alignment at lines 300--300
+st/fonts/enc/dvips/fontawesome5/fa5free2.enc}{/usr/share/texlive/texmf-dist/fon
+ts/enc/dvips/fontawesome5/fa5free1.enc}{/usr/share/texlive/texmf-dist/fonts/enc
+/dvips/fontawesome5/fa5brands0.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvi
+ps/fontawesome5/fa5free3.enc}]
+Overfull \hbox (12.12805pt too wide) in alignment at lines 281--281
 [] [] 
  []
 
 
-Overfull \hbox (0.55968pt too wide) in paragraph at lines 300--300
+Overfull \hbox (0.55968pt too wide) in paragraph at lines 281--283
 []  
  []
 
 
-Overfull \hbox (0.55968pt too wide) in paragraph at lines 300--300
-[]  
- []
+Package hyperref Warning: Suppressing link with empty target on input line 293.
 
 
-! LaTeX Error: \begin{itemize} on input line 222 ended by \end{singlespace}.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.300 ...ess affairs, contracts and employees.}}}}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+Package hyperref Warning: Suppressing link with empty target on input line 293.
 
 
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.300 ...ess affairs, contracts and employees.}}}}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) detected at line 300
-[][]
- []
-
-Runaway argument?
-{\small 
-! Paragraph ended before \text@command was complete.
-<to be read again> 
-                   \par 
-l.300 ...ess affairs, contracts and employees.}}}}
-                                                  
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Extra }, or forgotten \endgroup.
-<recently read> \egroup 
-                        
-l.300 ...ess affairs, contracts and employees.}}}}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-Overfull \hbox (0.55968pt too wide) in paragraph at lines 300--300
+Overfull \hbox (0.55968pt too wide) in paragraph at lines 293--295
 []  
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 300.
-! Extra }, or forgotten \endgroup.
-\resumeItem ... \item \small { {#1 \vspace {-2pt}}
-                                                   } 
-l.300 ...ess affairs, contracts and employees.}}}}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten \endgroup.
-\resumeItem ...item \small { {#1 \vspace {-2pt}} }
-                                                   
-l.300 ...ess affairs, contracts and employees.}}}}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+(Font)              <12> on input line 310.
 
 
-! LaTeX Error: \begin{document} ended by \end{singlespace}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.316 \end{singlespace}
-                       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Extra \endgroup.
-\end  ...end#1\endcsname \@checkend {#1}\endgroup 
-                                                  \UseHook {env/#1/after}\if...
-l.316 \end{singlespace}
-                       
-Things are pretty mixed up, but I think the worst is over.
-
-
-
-[2] (./20230501 Stephan DuVal Resume.aux)
+[2{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+(./20230501 Stephan DuVal Resume.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1130,32 +887,33 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `"20230501 Stephan DuVal Resume".out' has not
  changed.
-(rerunfilecheck)             Checksum: 1E5CA476A04FEEA2A2E95AFF9E44C778;591.
+(rerunfilecheck)             Checksum: 810FFF5ADC293422DE5C52266693E5F0;649.
  ) 
 Here is how much of TeX's memory you used:
- 26011 strings out of 475178
- 497369 string characters out of 5766539
- 871072 words of memory out of 5000000
- 48589 multiletter control sequences out of 15000+600000
- 567924 words of font info for 70 fonts, out of 8000000 for 9000
+ 25024 strings out of 475178
+ 482195 string characters out of 5766539
+ 858192 words of memory out of 5000000
+ 47607 multiletter control sequences out of 15000+600000
+ 568317 words of font info for 71 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 84i,9n,91p,588b,672s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome/FontAwesome.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmti12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm10
-00.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on "./20230501 Stephan DuVal Resume.pdf" (2 pages, 163864 bytes)
+ 84i,9n,91p,437b,698s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Br
+ands-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5
+/FontAwesome5Free-Solid.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf/fonts/t
+ype1/public/cm-super/sfrm1095.pfb>
+Output written on "./20230501 Stephan DuVal Resume.pdf" (2 pages, 177767 bytes)
 .
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
+ 125 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
  9 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
