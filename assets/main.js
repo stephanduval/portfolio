@@ -206,7 +206,6 @@ function bindCopyEmail(el) {
 }
 
 bindCopyEmail(document.getElementById('copyEmail'));
-bindCopyEmail(document.getElementById('copyEmailNav'));
 
 // ============================================================
 // PERSISTENT RINK — pans vertically across Scenes 2–6.
