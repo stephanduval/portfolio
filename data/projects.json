@@ -4,58 +4,71 @@
       "id": "wrioter",
       "title": "Wrioter",
       "type": "software",
-      "description": "Laravel/Vue.js creative writing platform and workflow platform.",
+      "role": "Lead Developer",
+      "dates": "2023 - Ongoing",
+      "description": "Online-only writing software for complex multi-chapter projects. Features mindmaps, visualizations, and drag-and-drop organization. Laravel 11 API with a TypeScript Vue 3 / Vuetify SPA.",
       "icon": "assets/Project Icons/Site - Wrioter.jpg",
-      "tags": ["PHP", "Vue.js", "Laravel"]
-    },
-    {
-      "id": "3d-prints",
-      "title": "Maple Film Supply 3D Printing",
-      "type": "making",
-      "description": "Designed and manufactured custom enclosures, mechanical parts, and prototypes using FDM printing.",
-      "icon": "assets/Project Icons/Project - 3DPrinter.jpg",
-      "tags": ["CAD", "FDM", "Design"],
-      "animation": "sway"
-    },
-    {
-      "id": "cnc-projects",
-      "title": "CNC Projects",
-      "type": "making",
-      "description": "Machined aluminum and wood components with tight tolerances. Designed CAM workflows for production runs.",
-      "icon": "assets/Project Icons/Project - CNC.jpg",
-      "tags": ["CAM", "Aluminum", "Precision"]
-    },
-    {
-      "id": "drone-engineering",
-      "title": "Drone Engineering",
-      "type": "making",
-      "description": "Designed and built multi-rotor drones with custom electronics integration and autonomous flight capabilities.",
-      "icon": "assets/Project Icons/Project - Drones.jpg",
-      "tags": ["Electronics", "Flight Control", "Integration"],
-      "animation": "orbit"
+      "tags": ["Vue", "Laravel", "MySQL"]
     },
     {
       "id": "3d-quote-system",
-      "title": "Missoula 3D Printing Services",
+      "title": "3D Printing Services Missoula",
       "type": "software",
-      "description": "Web application for quoting and managing 3D print orders with material tracking and inventory management.",
+      "role": "Founder",
+      "dates": "May 2026",
+      "description": "Proof-of-concept site supporting a 3D printing hobby. Customers upload files for instant estimates before ordering; anyone can register their own 3D printing business and connect with new customers.",
       "icon": "assets/Project Icons/Site - 3dPrinter.jpg",
-      "tags": ["Node.js", "Database", "SaaS"]
-    },{
-      "id": "mailclerk",
-      "title": "MailClerk",
-      "type": "software",
-      "description": "Web application for managing mail and smart mailboxes for receiving packages",
-      "icon": "",
-      "tags": ["Logistics", "Hardware Development", "Startup"]
+      "tags": ["PHP", "JS", "HTML"]
     },
     {
       "id": "mailclerk",
-      "title": "Freynet-Gagne Custom Portal",
+      "title": "MailClerk.com",
       "type": "software",
-      "description": "Web portal for managing Freynet-Gagne customer communication",
+      "role": "Founder & Director",
+      "dates": "2020 - 2021",
+      "description": "Software for SMBs in the mail-handling field to manage customers' mail and accounts. Tracks mail through multiple request types and provides an online wallet with automatic billing. Integrated with Notarize.com's API for customer validation.",
+      "icon": "assets/Project Icons/projects - mailclerk.JPG",
+      "tags": ["PHP", "Symfony", "Stripe"]
+    },
+    {
+      "id": "drone-engineering",
+      "title": "Drone & Robotics",
+      "type": "making",
+      "role": "Maker",
+      "dates": "Ongoing",
+      "description": "Building autonomous fixed-wing drones with custom electronics integration and ArduPilot flight control.",
+      "icon": "assets/Raster Images/Projects - Drone White.jpg",
+      "tags": ["C++", "ArduPilot", "Supply Chain"]
+    },
+    {
+      "id": "freynet-gagne",
+      "title": "Freynet-Gagne Customer Portal",
+      "type": "software",
+      "role": "Developer",
+      "dates": "Dec 2022 - Feb 2023",
+      "description": "Portal where government agents could initiate, track, and approve changes to translations of official documents.",
       "icon": "",
-      "tags": ["Laravel", "VueJS", "Client Relations"]
+      "tags": ["Vue", "Laravel", "MySQL"]
+    },
+    {
+      "id": "layoverbox",
+      "title": "LayoverBox.com",
+      "type": "software",
+      "role": "Software & Hardware Team Lead",
+      "dates": "Aug 2016 - June 2020",
+      "description": "A smart parcel-receiving mailbox built with the UBC Electrical Engineering Capstone program. Couriers drop parcels without a human clerk; SouthCo lock integration over RS-232 with a React/Electron local app. Led both the software and hardware engineering teams and chose the tech stack.",
+      "icon": "assets/Raster Images/Projects - Layover Box 01.JPG",
+      "tags": ["React", "Electron", "RS-232"]
+    },
+    {
+      "id": "esnail",
+      "title": "eSnail.ca",
+      "type": "software",
+      "role": "Founder & Director",
+      "dates": "Feb 2008 - March 2023",
+      "description": "Software that let individuals view their postal mail online for fifteen years. Founded and directed the company from 2008 - managed three franchises in three cities and two employees, and handled taxes, payroll, and software maintenance.",
+      "icon": "assets/Raster Images/projects - eSnail.ca 01.jpg",
+      "tags": ["PHP", "Kohana", "Moneris"]
     }
   ]
 }

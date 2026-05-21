@@ -3,111 +3,451 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stephan Douglas Duval - Software Engineer & Maker</title>
+    <title>Stephan Douglas DuVal — Software Engineer & Maker</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-    <!-- White Background -->
-    <svg class="background-svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
-        <defs>
-            <filter id="blur">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="0.5" />
-            </filter>
-        </defs>
 
-        <!-- Background -->
-        <rect width="1200" height="800" fill="#ffffff"/>
-
-        <!-- Animated shapes (subtle greyscale) -->
-        <circle cx="100" cy="100" r="80" fill="#e0e0e0" opacity="0.3" class="float-1"/>
-        <circle cx="1100" cy="700" r="120" fill="#d0d0d0" opacity="0.3" class="float-2"/>
-        <rect x="600" y="150" width="150" height="150" fill="#f0f0f0" opacity="0.2" class="rotate-1" rx="20"/>
-        <path d="M 200 600 L 300 650 L 250 750 Z" fill="#e8e8e8" opacity="0.2" class="float-3"/>
-    </svg>
-
-    <!-- Navigation -->
+    <!-- ============================================
+         NAVBAR — Icons-only on the right
+         ============================================ -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">SD</div>
-            <!-- <span class="emoji">🌕</span> -->
-            <ul class="nav-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li>
-                    <a href="assets/resume.pdf" class="btn btn-primary" target="_blank">
-                        <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7 10 12 15 17 10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg>
-                        Resume
-                    </a>
-                </li>
-            </ul>
+            <a href="#warmup" class="logo">SD</a>
+            <div class="nav-icons">
+                <button id="copyEmailNav" class="icon-btn" title="Copy email" aria-label="Copy email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="5" width="18" height="14" rx="2"/>
+                        <path d="M3 7l9 6 9-6"/>
+                    </svg>
+                </button>
+                <a href="https://www.linkedin.com/in/stephanduval/" target="_blank" rel="noopener" class="icon-btn" title="LinkedIn" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 1 1 8.3 6.5a1.78 1.78 0 0 1-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0 0 13 14.19a.66.66 0 0 0 0 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 0 1 2.7-1.4c1.55 0 3.36.86 3.36 3.66z"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/stephanduval" target="_blank" rel="noopener" class="icon-btn" title="GitHub" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57v-2c-3.33.73-4.04-1.6-4.04-1.6-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .31.21.69.83.57A12 12 0 0 0 12 .3"/>
+                    </svg>
+                </a>
+                <a href="assets/resume.pdf" download="Stephan_Duval_Resume.pdf" target="_blank" rel="noopener" class="icon-btn" title="Resume" aria-label="Resume">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                </a>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="name-with-portrait">
-                    <h1 class="title">Stephan Douglas Duval</h1>
-                    <div class="portrait-wrapper">
-                        <img src="assets/icons/drone.svg" alt="Drone Engineering" class="drone-top">
-                        <img src="assets/Raster Images/SDREach.png" alt="Stephan Douglas Duval Portrait" class="portrait">
-                    </div>
-                </div>
-                <p class="subtitle">Software Developer</p>
-                <p class="description">Drones crash. Code breaks. Clouds get in the way. But the moon is still there.
-</p>
+    <!-- ============================================
+         PERSISTENT RINK — pans top→bottom across all scenes
+         ============================================ -->
+    <div class="persistent-rink" aria-hidden="true">
+        <img class="persistent-rink-img js-persistent-rink"
+             src="assets/SVG_images/d2.svg" alt=""/>
+    </div>
 
-                <div class="button-group">
-                    <a href="mailto:applications@mail.stephandouglasduval.com" class="btn btn-primary">Send Email</a>
-                    <button id="copyEmail" class="btn btn-primary" title="Copy email to clipboard">
-                        <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Hero SVG Icons -->
-            <div class="hero-graphics">
-                <div class="hero-icons">
-                </div>
-            </div>
+    <!-- ============================================
+         BROADCAST CHROME — persistent overlay
+         ============================================ -->
+    <div class="broadcast-chrome" aria-hidden="true">
+        <div class="lower-third" data-lower-third>
+            <p class="lt-story" data-lt-story></p>
+            <span class="lt-label">FEATURE</span>
+            <span class="lt-text">STEPHAN DUVAL</span>
         </div>
-    </header>
+        <div class="scoreboard">
+            <span class="period" data-period>PERIOD 1</span>
+            <span class="clock" data-clock>00:00</span>
+            <span class="penalty" data-penalty style="display:none">PEN 0:00</span>
+        </div>
+    </div>
 
-    <!-- Skills Section -->
-    <section id="about" class="skills">
-        <div class="container">
-            <h2>Skills & Expertise</h2>
-            <div class="skills-grid" id="skillsGrid">
-                <!-- Skills loaded dynamically from data/skills.json -->
+    <!-- ============================================
+         SCENE 1: WARMUP — puck drop intro
+         ============================================ -->
+    <section id="warmup" class="scene scene-warmup">
+        <svg class="warmup-stage" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid meet">
+            <image class="warmup-rink" href="assets/SVG_images/d2.svg" x="0" y="0" width="1200" height="800" opacity="0"/>
+            <circle class="warmup-spot" cx="600" cy="400" r="30" fill="none" stroke="#c1121f" stroke-width="3" opacity="0"/>
+            <image class="warmup-puck js-puck" data-puck="warmup"
+                   href="assets/icons/design%20%20%282%29.svg"
+                   x="570" y="-60" width="60" height="52"/>
+        </svg>
+        <!-- Inline opacity:0 applies at HTML parse time, before any
+             stylesheet or script — prevents a flash on cold loads. -->
+        <div class="warmup-overlay" style="opacity:0">
+            <span class="overlay-title">STEPHAN DUVAL</span>
+            <span class="overlay-sub">— Full Stack Developer —</span>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SCENE 2: FACE-OFF — pilot episode
+         ============================================ -->
+    <section id="faceoff" class="scene scene-faceoff">
+        <svg class="faceoff-stage" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+            <defs>
+                <clipPath id="faceoffClip">
+                    <circle cx="600" cy="400" r="0" class="faceoff-clip-circle"/>
+                </clipPath>
+            </defs>
+            <g clip-path="url(#faceoffClip)">
+                <!-- Tall image box always covers the clip circle (cx600 cy400
+                     r220 → y180-620) so the matte stays a full circle.
+                     Box shifted down 200px to situate the photo lower
+                     in the matte; xMidYMin anchors the photo to the box top. -->
+                <image href="assets/Raster%20Images/SDHockeyYoung.jpg"
+                       x="360" y="145" width="480" height="880"
+                       preserveAspectRatio="xMidYMin slice"/>
+            </g>
+            <image class="faceoff-player-left"
+                   href="assets/icons/design%20%20%2868%29.svg"
+                   x="370" y="205" width="120" height="120"/>
+            <image class="faceoff-player-right"
+                   href="assets/icons/design%20%20%28114%29.svg"
+                   x="710" y="205" width="120" height="120"/>
+        </svg>
+    </section>
+
+    <!-- ============================================
+         SCENE 3: LONG SHIFT — 18 years on the line
+         ============================================ -->
+    <section id="long-shift" class="scene scene-shift">
+        <svg class="shift-stage" viewBox="0 0 1600 800" preserveAspectRatio="xMidYMid slice">
+            <path id="boards-path" d="M 100,150 Q 800,100 1500,150 L 1500,650 Q 800,700 100,650" fill="none" stroke="none"/>
+            <!-- FILM photo cards. data-order = reveal order (1..7):
+                 2008,2010,2013,2014,2018,2019,2020 — 2020 reveals last,
+                 in the bottom row. -->
+            <g class="shift-year-markers">
+                <!-- Row 1 — top -->
+                <g class="year-marker film-card" data-order="1" transform="translate(150, 120) rotate(-6)">
+                    <rect x="-8" y="-8" width="276" height="216" rx="6" fill="#ffffff"
+                          stroke="rgba(0,0,0,0.15)" stroke-width="2"/>
+                    <image href="assets/Raster%20Images/FILM%202008.jpg"
+                           x="0" y="0" width="260" height="174" preserveAspectRatio="xMidYMid slice"/>
+                    <text x="130" y="196" text-anchor="middle" class="film-year">2008</text>
+                </g>
+                <g class="year-marker film-card" data-order="2" transform="translate(670, 120) rotate(4)">
+                    <rect x="-8" y="-8" width="276" height="216" rx="6" fill="#ffffff"
+                          stroke="rgba(0,0,0,0.15)" stroke-width="2"/>
+                    <image href="assets/Raster%20Images/FILM%202010.jpg"
+                           x="0" y="0" width="260" height="174" preserveAspectRatio="xMidYMid slice"/>
+                    <text x="130" y="196" text-anchor="middle" class="film-year">2010</text>
+                </g>
+                <g class="year-marker film-card" data-order="3" transform="translate(1190, 120) rotate(-5)">
+                    <rect x="-8" y="-8" width="276" height="216" rx="6" fill="#ffffff"
+                          stroke="rgba(0,0,0,0.15)" stroke-width="2"/>
+                    <image href="assets/Raster%20Images/FILM%202013.JPG"
+                           x="0" y="0" width="260" height="174" preserveAspectRatio="xMidYMid slice"/>
+                    <text x="130" y="196" text-anchor="middle" class="film-year">2013</text>
+                </g>
+                <!-- 2020 — bottom row, revealed last -->
+                <g class="year-marker film-card" data-order="7" transform="translate(670, 530) rotate(-3)">
+                    <rect x="-8" y="-8" width="276" height="216" rx="6" fill="#ffffff"
+                          stroke="rgba(0,0,0,0.15)" stroke-width="2"/>
+                    <image href="assets/Raster%20Images/FILM%202020.jpg"
+                           x="0" y="0" width="260" height="174" preserveAspectRatio="xMidYMid slice"/>
+                    <text x="130" y="196" text-anchor="middle" class="film-year">2020</text>
+                </g>
+                <!-- Row 2 — centre -->
+                <g class="year-marker film-card" data-order="6" transform="translate(150, 295) rotate(5)">
+                    <rect x="-8" y="-8" width="276" height="216" rx="6" fill="#ffffff"
+                          stroke="rgba(0,0,0,0.15)" stroke-width="2"/>
+                    <image href="assets/Raster%20Images/FILM%202019.jpg"
+                           x="0" y="0" width="260" height="174" preserveAspectRatio="xMidYMid slice"/>
+                    <text x="130" y="196" text-anchor="middle" class="film-year">2019</text>
+                </g>
+                <g class="year-marker film-card" data-order="5" transform="translate(670, 295) rotate(-4)">
+                    <rect x="-8" y="-8" width="276" height="216" rx="6" fill="#ffffff"
+                          stroke="rgba(0,0,0,0.15)" stroke-width="2"/>
+                    <image href="assets/Raster%20Images/FILM%202018.jpg"
+                           x="0" y="0" width="260" height="174" preserveAspectRatio="xMidYMid slice"/>
+                    <text x="130" y="196" text-anchor="middle" class="film-year">2018</text>
+                </g>
+                <g class="year-marker film-card" data-order="4" transform="translate(1190, 295) rotate(7)">
+                    <rect x="-8" y="-8" width="276" height="216" rx="6" fill="#ffffff"
+                          stroke="rgba(0,0,0,0.15)" stroke-width="2"/>
+                    <image href="assets/Raster%20Images/FILM%202014.jpg"
+                           x="0" y="0" width="260" height="174" preserveAspectRatio="xMidYMid slice"/>
+                    <text x="130" y="196" text-anchor="middle" class="film-year">2014</text>
+                </g>
+            </g>
+            <g class="shift-traveller">
+                <image class="js-player" href="assets/icons/design%20%20%2886%29.svg"
+                       x="-35" y="-50" width="70" height="100"/>
+                <image class="js-puck" data-puck="long-shift"
+                       href="assets/icons/design%20%20%282%29.svg"
+                       x="-25" y="50" width="50" height="43"/>
+            </g>
+        </svg>
+    </section>
+
+    <!-- ============================================
+         SCENE 4: BREAKAWAY — going solo
+         ============================================ -->
+    <section id="breakaway" class="scene scene-breakaway">
+        <svg class="breakaway-stage" viewBox="0 0 1600 800" preserveAspectRatio="xMidYMid slice">
+            <path id="breakaway-path" d="M 200,650 Q 700,400 1400,200" fill="none" stroke="none"/>
+            <g class="breakaway-traveller">
+                <image class="js-player" href="assets/icons/design%20%20%2873%29.svg"
+                       x="-40" y="-50" width="80" height="80"/>
+                <image class="js-puck" data-puck="breakaway"
+                       href="assets/icons/design%20%20%282%29.svg"
+                       x="-25" y="35" width="50" height="43"/>
+            </g>
+        </svg>
+        <div class="breakaway-callouts">
+            <div class="callout" data-callout="1">
+                <div class="callout-photos">
+                    <img class="scatter" src="assets/Raster%20Images/projects%20-%20eSnail.ca%2001.jpg" alt="eSnail.ca" style="--rot: -7deg; --dx: 0px;  --dy: 0px;">
+                    <img class="scatter" src="assets/Raster%20Images/projects%20-%20eSnail.ca%2002.JPG" alt="eSnail.ca" style="--rot: 5deg;  --dx: 36px; --dy: 143px;">
+                    <img class="scatter" src="assets/Raster%20Images/projects%20-%20eSnail.ca%2003.JPG" alt="eSnail.ca" style="--rot: -3deg; --dx: 14px; --dy: 286px;">
+                </div>
+                <div class="callout-text">
+                    <h3>eSnail.ca</h3>
+                    <p class="callout-role">Founder &amp; Director · 2008–2023</p>
+                    <p>Software that let people view their postal mail online — run for 15 years across 3 city franchises with 2 employees. Handled the company's taxes, payroll and software maintenance.</p>
+                    <div class="proj-tags"><span>PHP</span><span>Kohana</span><span>Moneris</span></div>
+                </div>
+            </div>
+            <div class="callout" data-callout="2">
+                <div class="callout-photos">
+                    <img class="scatter" src="assets/Raster%20Images/Projects%20-%20Layover%20Box%2001.JPG" alt="LayoverBox" style="--rot: 6deg;  --dx: 0px;  --dy: 0px;">
+                    <img class="scatter" src="assets/Raster%20Images/Projects%20-%20Layover%20Box%2002.jpg" alt="LayoverBox" style="--rot: -6deg; --dx: 34px; --dy: 143px;">
+                    <img class="scatter" src="assets/Raster%20Images/Projects%20-%20Layover%20Box%2003.jpg" alt="LayoverBox" style="--rot: 3deg;  --dx: 12px; --dy: 286px;">
+                </div>
+                <div class="callout-text">
+                    <h3>LayoverBox</h3>
+                    <p class="callout-role">Software &amp; Hardware Team Lead · 2016–2020</p>
+                    <p>A smart parcel-receiving mailbox built with UBC's Electrical Engineering Capstone — couriers drop parcels with no human clerk. Led both engineering teams and chose the stack.</p>
+                    <div class="proj-tags"><span>React</span><span>Electron</span><span>RS-232</span></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid" id="projectsGrid">
-                <!-- Projects loaded dynamically from data/projects.json -->
+    <!-- ============================================
+         SCENE 5: TIC-TAC-TOE — passing play (carousel)
+         ============================================ -->
+    <section id="tic-tac-toe" class="scene scene-ttt">
+        <svg class="ttt-stage" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+            <g class="ttt-players">
+                <image data-player="1" class="js-player" href="assets/icons/design%20%20%28104%29.svg"
+                       x="275" y="165" width="90" height="130"/>
+                <image data-player="2" class="js-player" href="assets/icons/design%20%20%28105%29.svg"
+                       x="1235" y="165" width="90" height="130"/>
+                <image data-player="3" class="js-player" href="assets/icons/design%20%20%28117%29.svg"
+                       x="770" y="280" width="180" height="260"/>
+                <image data-player="4" class="js-player" href="assets/icons/design%20%20%28111%29.svg"
+                       x="275" y="565" width="90" height="130"/>
+                <image data-player="5" class="js-player" href="assets/icons/design%20%20%2882%29.svg"
+                       x="1235" y="565" width="90" height="130"/>
+            </g>
+            <g class="ttt-lanes" stroke="#ffd60a" stroke-width="3" fill="none" stroke-dasharray="8 8">
+                <line data-lane="1" x1="320" y1="230" x2="1280" y2="230"/>
+                <line data-lane="2" x1="1280" y1="230" x2="800" y2="410"/>
+                <line data-lane="3" x1="800" y1="410" x2="320" y2="630"/>
+                <line data-lane="4" x1="320" y1="630" x2="1280" y2="630"/>
+            </g>
+            <image class="ttt-puck js-puck" data-puck="tic-tac-toe"
+                   href="assets/icons/design%20%20%282%29.svg"
+                   x="295" y="208" width="50" height="43"/>
+        </svg>
+        <div class="ttt-cards">
+            <article class="proj-card" data-card="1" style="top: 80px; left: 380px;">
+                <img class="proj-thumb" src="assets/Project%20Icons/projects%20-%20mailclerk.JPG" alt="MailClerk.com">
+                <h3>MailClerk.com</h3>
+                <p class="proj-date">2020–2021 — Founder &amp; Director</p>
+                <p>Software for SMBs to manage customers' mail and accounts, with an online wallet and automatic billing. Integrated Notarize.com's API for customer validation.</p>
+                <div class="proj-tags"><span>PHP</span><span>Symfony</span><span>Stripe</span></div>
+            </article>
+            <article class="proj-card" data-card="2" style="top: 80px; right: 80px;">
+                <img class="proj-thumb" src="assets/Project%20Icons/Site%20-%203dPrinter.jpg" alt="3D Printing Services Missoula">
+                <h3>3D Printing Services Missoula</h3>
+                <p class="proj-date">2026 — Founder</p>
+                <p>Customers upload files for instant estimates before ordering; anyone can register their own 3D printing business and connect with new customers.</p>
+                <div class="proj-tags"><span>PHP</span><span>JS</span><span>HTML</span></div>
+            </article>
+            <article class="proj-card" data-card="3" style="top: 340px; left: 50%; transform: translateX(-50%);">
+                <h3>Wrioter</h3>
+                <p class="proj-date">2023 — Lead Developer</p>
+                <p>Online writing software for complex multi-chapter projects — mindmaps, visualizations, and drag-and-drop organization.</p>
+                <div class="proj-tags"><span>Vue</span><span>Laravel</span><span>MySQL</span></div>
+            </article>
+            <article class="proj-card" data-card="4" style="bottom: 80px; left: 380px;">
+                <img class="proj-thumb" src="assets/Raster%20Images/Projects%20-%20Drone%20White.jpg" alt="Drone & Robotics">
+                <h3>Drone &amp; Robotics</h3>
+                <p class="proj-date">Ongoing</p>
+                <p>Building autonomous fixed-wing drones.</p>
+                <div class="proj-tags"><span>C++</span><span>ArduPilot</span><span>Supply Chain</span></div>
+            </article>
+            <article class="proj-card" data-card="5" style="bottom: 80px; right: 80px;">
+                <h3>Freynet-Gagne Customer Portal</h3>
+                <p class="proj-date">2022–2023 — Developer</p>
+                <p>Portal where government agents could initiate, track, and approve changes to translations of official documents.</p>
+                <div class="proj-tags"><span>Vue</span><span>Laravel</span><span>MySQL</span></div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SCENE 6: TELESTRATOR — Wrioter deep dive
+         ============================================ -->
+    <section id="telestrator" class="scene scene-telestrator">
+        <svg class="tele-stage" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+            <defs>
+                <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+                    <polygon points="0 0, 8 3, 0 6" fill="#ffd60a"/>
+                </marker>
+            </defs>
+            <!-- Frozen play -->
+            <image class="js-player" href="assets/icons/design%20%20%28124%29.svg"
+                   x="735" y="320" width="90" height="120"/>
+            <image class="js-player" href="assets/icons/design%20%20%2879%29.svg"
+                   x="755" y="450" width="90" height="120"/>
+            <image class="js-player" href="assets/icons/design%20%20%2846%29.svg"
+                   x="765" y="500" width="90" height="120"/>
+            <image class="js-puck" data-puck="telestrator"
+                   href="assets/icons/design%20%20%282%29.svg"
+                   x="775" y="428" width="50" height="43"/>
+            <!-- Telestrator chalk highlight + curved arrows out to the sides -->
+            <g class="telestrator-marks" stroke="#ffd60a" stroke-width="4" fill="none">
+                <circle data-mark="1" cx="800" cy="450" r="60" stroke-dasharray="6 4" stroke-dashoffset="400"/>
+                <path data-mark="2" d="M 860,440 Q 1080,360 1240,250" marker-end="url(#arrowhead)" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/>
+                <path data-mark="3" d="M 740,440 Q 520,360 360,250" marker-end="url(#arrowhead)" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/>
+            </g>
+        </svg>
+
+        <!-- Wrioter tech-stack breakdown — 7 telestrator topics -->
+        <div class="tele-topics">
+            <h2 class="tele-heading">Wrioter — Reading the Play</h2>
+            <div class="tele-grid">
+                <article class="tele-topic detailed" data-topic="1">
+                    <span class="tele-tag">Backend</span>
+                    <h3>Laravel 11</h3>
+                    <ul class="tele-subs">
+                        <li>Sanctum SPA / token auth</li>
+                        <li>vue-i18n translation framework</li>
+                        <li>PHPUnit 11 feature tests</li>
+                    </ul>
+                </article>
+                <article class="tele-topic detailed" data-topic="2">
+                    <span class="tele-tag">Frontend</span>
+                    <h3>Vue 3 + Vuetify</h3>
+                    <ul class="tele-subs">
+                        <li>TypeScript 5.5, Composition API</li>
+                        <li>Pinia state, Vue Router 4</li>
+                        <li>Vite 5.3 build pipeline</li>
+                    </ul>
+                </article>
+                <article class="tele-topic" data-topic="3">
+                    <span class="tele-tag">Library</span>
+                    <h3>Vue Flow</h3>
+                </article>
+                <article class="tele-topic" data-topic="4">
+                    <span class="tele-tag">Mind-maps</span>
+                    <h3>Mind-Map Canvas</h3>
+                </article>
+                <article class="tele-topic" data-topic="5">
+                    <span class="tele-tag">Interactivity</span>
+                    <h3>Instant reactive hydration across components for smoother interactivity</h3>
+                </article>
+                <article class="tele-topic" data-topic="6">
+                    <span class="tele-tag">Access</span>
+                    <h3>CASL permissions</h3>
+                </article>
+                <article class="tele-topic" data-topic="7">
+                    <span class="tele-tag">Snippets</span>
+                    <h3>Dynamic text snippets that live-reference text across manuscripts for quick, flexible editing</h3>
+                </article>
+                <article class="tele-topic" data-topic="8">
+                    <span class="tele-tag">Import</span>
+                    <h3>Imports Scrivener files into the Wrioter format</h3>
+                </article>
             </div>
         </div>
     </section>
 
+    <!-- ============================================
+         SCENE 7: REPLAY REEL — maker portraits
+         ============================================ -->
+    <section id="replay-reel" class="scene scene-replay">
+        <svg class="replay-bg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+        </svg>
+        <div class="replay-overlay"></div>
+        <h2 class="replay-title">Outside the <s>Penalty</s> Box</h2>
+        <div class="pip-grid">
+            <figure class="pip" data-pip="1">
+                <div class="pip-frame">
+                    <img src="assets/Raster%20Images/Projects%20-%203D%20Printer.jpg" alt="3D printing and CNC work">
+                </div>
+                <span class="replay-badge"><span class="dot"></span>REPLAY</span>
+                <figcaption>3D Printing and CNC</figcaption>
+            </figure>
+            <figure class="pip" data-pip="2">
+                <div class="pip-frame">
+                    <img src="assets/Raster%20Images/Projects%20-%20Drones.jpg" alt="Fixed wing drone build">
+                </div>
+                <span class="replay-badge"><span class="dot"></span>REPLAY</span>
+                <figcaption>Fixed Wing Drones &amp; ArduPilot</figcaption>
+            </figure>
+            <figure class="pip" data-pip="3">
+                <div class="pip-frame">
+                    <img src="assets/Raster%20Images/Projects%20-%20Woodcarving.JPG" alt="Traditional woodcarving">
+                </div>
+                <span class="replay-badge"><span class="dot"></span>REPLAY</span>
+                <figcaption>Traditional Woodcarving</figcaption>
+            </figure>
+            <figure class="pip" data-pip="4">
+                <div class="pip-frame">
+                    <img src="assets/Raster%20Images/Projects%20-%20Programming.jpg" alt="Prototyping circuits">
+                </div>
+                <span class="replay-badge"><span class="dot"></span>REPLAY</span>
+                <figcaption>Prototyping Circuits — Wireless Voltage Meter, LoRa</figcaption>
+            </figure>
+        </div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2026 Stephan Douglas Duval. All rights reserved.</p>
-    </footer>
+    <!-- ============================================
+         SCENE 8: GOAL — slap shot + CTA
+         ============================================ -->
+    <section id="goal" class="scene scene-goal">
+        <svg class="goal-stage" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+            <!-- Net -->
+            <image class="net-icon" href="assets/icons/design%20%20%28102%29.svg"
+                   x="620" y="110" width="360" height="200"/>
+            <!-- Goal light (invisible until it flashes red) -->
+            <circle class="goal-light" cx="800" cy="80" r="25" fill="#e63946" opacity="0"/>
+            <!-- Shooter -->
+            <image class="js-player" href="assets/icons/design%20%20%2885%29.svg"
+                   x="755" y="695" width="90" height="130"/>
+            <!-- Puck — hidden until it appears and rockets into the net -->
+            <image class="goal-puck js-puck" data-puck="goal"
+                   href="assets/icons/design%20%20%282%29.svg"
+                   x="775" y="679" width="50" height="43" opacity="0"/>
+        </svg>
+        <div class="goal-cta">
+            <h2>Let's make the next play.</h2>
+            <p>Get in touch — I'm taking on new projects.</p>
+            <div class="goal-actions">
+                <a href="mailto:applications@mail.stephandouglasduval.com" class="btn btn-primary">Email Stephan</a>
+                <button id="copyEmail" class="btn btn-secondary">Copy Email</button>
+            </div>
+        </div>
+    </section>
 
+    <!-- GSAP + ScrollTrigger + MotionPathPlugin -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
     <script src="assets/main.js"></script>
 </body>
 </html>

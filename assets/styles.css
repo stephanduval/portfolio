@@ -1,13 +1,23 @@
+/* ============================================
+   ROOT TOKENS
+   ============================================ */
 :root {
+    /* Legacy tokens (kept for compatibility) */
     --primary: #333333;
     --secondary: #555555;
     --accent: #999999;
-    --accent-2: #777777;
-    --accent-3: #cccccc;
-    --text: #ffffff;
+    --text: #111111;
     --text-light: #cccccc;
     --bg-light: #ffffff;
-    --white: #000000;
+
+    /* Broadcast tokens */
+    --ice: #d7ebfb;
+    --ice-dark: #85bae6;
+    --puck: #0a0a0a;
+    --broadcast-bg: #111418;
+    --broadcast-accent: #e63946;
+    --telestrator: #ffd60a;
+    --net: #c1121f;
 }
 
 * {
@@ -17,58 +27,26 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto; /* GSAP ScrollTrigger handles scroll */
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: var(--text);
+    background: #ffffff;
     overflow-x: hidden;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+h1, h2, h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
 }
 
-/* Background SVG Animation */
-.background-svg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-@keyframes float-1 {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-30px); }
-}
-
-@keyframes float-2 {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(40px); }
-}
-
-@keyframes float-3 {
-    0%, 100% { transform: translateX(0px); }
-    50% { transform: translateX(20px); }
-}
-
-@keyframes rotate-1 {
-    0%, 100% { transform: rotate(0deg); }
-    50% { transform: rotate(5deg); }
-}
-
-.float-1 { animation: float-1 6s ease-in-out infinite; }
-.float-2 { animation: float-2 8s ease-in-out infinite; }
-.float-3 { animation: float-3 7s ease-in-out infinite; }
-.rotate-1 { animation: rotate-1 6s ease-in-out infinite; }
-
-/* Navigation */
+/* ============================================
+   NAVBAR
+   ============================================ */
 .navbar {
     position: fixed;
     top: 0;
@@ -77,14 +55,14 @@ body {
     z-index: 1000;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    padding: 20px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 16px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 32px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -92,581 +70,1062 @@ body {
 
 .logo {
     font-size: 1.5rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.emoji {
-    font-size: 1.5rem;
-    margin-left: 4px;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-}
-
-.nav-menu a {
+    font-weight: 800;
+    color: var(--primary);
     text-decoration: none;
-    color: var(--text);
-    font-weight: 500;
-    transition: color 0.3s ease;
+    letter-spacing: 0.02em;
+}
+
+.nav-icons {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 20px;
 }
 
-.nav-menu .btn {
-    padding: 8px 16px;
+.icon-btn {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: var(--primary);
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+.icon-btn svg {
+    width: 22px;
+    height: 22px;
+}
+
+.icon-btn:hover {
+    background: rgba(0, 0, 0, 0.06);
+    transform: translateY(-1px);
+}
+
+.icon-btn.copied {
+    color: #2a9d4a;
+    background: rgba(42, 157, 74, 0.12);
+}
+
+/* ============================================
+   PERSISTENT RINK — sits behind Scenes 2–6.
+   154vw wide and stretched vertically (fixed tall height) so it
+   has enough travel to pan slowly across the whole Face-Off →
+   Telestrator scroll span. Hidden outside via .rink-visible.
+   ============================================ */
+.persistent-rink {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(calc(-50% - 110px));   /* 110px left of centre */
+    width: 154vw;
+    z-index: 1;                    /* above scene backgrounds, below scene SVG content */
+    pointer-events: none;
+    overflow: visible;
+    will-change: transform;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.persistent-rink.rink-visible {
+    opacity: 1;
+}
+
+.persistent-rink-img {
+    display: block;
+    width: 100%;
+    height: 320vh;                 /* stretched tall — gives the pan room to span Scenes 2–6 */
+    /* y-translation is set by GSAP based on scroll progress */
+}
+
+/* ============================================
+   BROADCAST CHROME (persistent overlay)
+   ============================================ */
+.broadcast-chrome {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 50;
+}
+
+.lower-third {
+    position: absolute;
+    bottom: 60px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    background: var(--broadcast-bg);
+    color: #ffffff;
+    padding: 16px 28px;
+    border-left: 4px solid var(--broadcast-accent);
+    opacity: 0;
+    transform: translateX(-12px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+    min-width: 260px;
+    max-width: 460px;           /* long story text wraps; box grows upward */
+}
+
+/* Story paragraph — sits above the caption; box is bottom-anchored
+   so a longer story pushes the box upward. */
+.lt-story {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* When there's no story text, collapse the element entirely. */
+.lt-story:empty {
+    display: none;
+}
+
+.lower-third.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.lt-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: var(--broadcast-accent);
+    text-transform: uppercase;
+}
+
+.lt-text {
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.scoreboard {
+    position: absolute;
+    top: 84px;
+    right: 40px;
+    display: flex;
+    gap: 16px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    background: rgba(17, 20, 24, 0.85);
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.scoreboard.visible {
+    opacity: 1;
+}
+
+.scoreboard .clock {
+    color: var(--telestrator);
+}
+
+.scoreboard .penalty {
+    color: #ff4444;
+    font-weight: bold;
+}
+
+/* ============================================
+   SCENE BASE
+   ============================================ */
+.scene {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background: transparent;
+    z-index: 2;                    /* sits above persistent rink */
+}
+
+.scene svg {
+    display: block;
+    width: 100%;
+    height: 100vh;
+}
+
+/* ============================================
+   SCENE 1: WARMUP
+   ============================================ */
+.scene-warmup {
+    background: #060a10;
+}
+
+.warmup-stage {
+    position: absolute;
+    inset: 0;
+}
+
+/* Warmup-only rink, sized to this scene; faded in by the intro timeline. */
+.warmup-rink {
+    transform: translateX(-20px);
+}
+
+.warmup-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    opacity: 0;                /* GSAP warmupIntro fades this in */
+    pointer-events: none;
+}
+
+.overlay-title {
+    font-size: clamp(2rem, 5.5vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.overlay-sub {
+    font-size: 1.1rem;
+    color: var(--telestrator);
+    margin-top: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    animation: hintPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes hintPulse {
+    0%, 100% { opacity: 0.45; transform: translateX(-50%) translateY(0); }
+    50% { opacity: 1; transform: translateX(-50%) translateY(6px); }
+}
+
+/* ============================================
+   SCENE 2: FACE-OFF
+   ============================================ */
+.scene-faceoff {
+    background: transparent;
+}
+
+.faceoff-stage {
+    position: absolute;
+    inset: 0;
+}
+
+/* ============================================
+   SCENE 3: LONG SHIFT
+   ============================================ */
+.scene-shift {
+    background: transparent;
+    border-bottom: 3px solid #000000;
+}
+
+/* FILM photo cards — scattered, faded in by GSAP stagger */
+.year-marker {
+    opacity: 0;
+}
+
+.film-card {
+    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
+}
+
+.film-year {
+    font-family: 'Courier New', monospace;
+    font-size: 28px;
+    font-weight: 700;
+    fill: #1a1a1a;
+}
+
+/* ============================================
+   SCENE 4: BREAKAWAY
+   ============================================ */
+.scene-breakaway {
+    background: transparent;
+}
+
+.breakaway-callouts {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.callout {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    opacity: 0;
+    pointer-events: auto;
+}
+
+.callout[data-callout="1"] {
+    top: 7%;
+    left: 5%;
+}
+
+.callout[data-callout="2"] {
+    top: 40%;
+    right: 5%;
+    flex-direction: row-reverse;
+}
+
+/* Scattered photo cluster — photos stacked vertically, ~5% overlap */
+.callout-photos {
+    position: relative;
+    width: 260px;
+    height: 440px;
+    flex-shrink: 0;
+}
+
+.callout-photos .scatter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+    transform: translate(var(--dx, 0), var(--dy, 0)) rotate(var(--rot, 0deg));
+}
+
+/* Text card */
+.callout-text {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--broadcast-accent);
+    border-radius: 8px;
+    padding: 18px 24px;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.14);
+    max-width: 320px;
+}
+
+.callout-text h3 {
+    font-size: 1.25rem;
+    margin-bottom: 2px;
+}
+
+.callout-role {
+    font-size: 0.75rem !important;
+    font-weight: 700;
+    color: var(--broadcast-accent) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+}
+
+.callout p {
     font-size: 0.9rem;
+    color: var(--secondary);
+    line-height: 1.5;
 }
 
-.nav-menu a:hover {
+/* ============================================
+   SCENE 5: TIC-TAC-TOE (carousel)
+   ============================================ */
+.scene-ttt {
+    background: transparent;
+}
+
+.ttt-stage {
+    position: absolute;
+    inset: 0;
+}
+
+
+.ttt-cards {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.proj-card {
+    position: absolute;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-top: 4px solid var(--broadcast-accent);
+    border-radius: 10px;
+    padding: 18px 22px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.14);
+    width: 280px;
+    opacity: 0;
+    pointer-events: auto;
+}
+
+.proj-thumb {
+    width: calc(100% + 44px);
+    margin: -18px -22px 14px;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.proj-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
     color: var(--primary);
 }
 
-
-.download-icon {
-    width: 16px;
-    height: 16px;
-    stroke-width: 2.5;
+.proj-card .proj-date {
+    font-size: 0.75rem;
+    color: var(--broadcast-accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
 }
 
-.copy-btn {
-    padding: 14px 14px;
+.proj-card p {
+    font-size: 0.88rem;
+    color: var(--secondary);
+    line-height: 1.45;
+}
+
+.proj-tags {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
 }
 
-.copy-icon {
-    width: 20px;
-    height: 20px;
-    stroke-width: 2;
+.proj-tags span {
+    background: rgba(0, 0, 0, 0.06);
+    color: var(--primary);
+    padding: 3px 9px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
 }
 
-.copy-btn.copied {
-    background: #4CAF50;
-    border-color: #4CAF50;
+/* ============================================
+   SCENE 6: TELESTRATOR
+   ============================================ */
+.scene-telestrator {
+    background: transparent;
 }
 
-/* Hero Section */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    color: #000000;
+.tele-stage {
+    position: absolute;
+    inset: 0;
+}
+
+.telestrator-marks text {
+    paint-order: stroke;
+}
+
+/* Wrioter tech-stack topic panel.
+   Topics flow into a LEFT and RIGHT column; the middle 30% column
+   stays empty so the frozen play / chalk marks read clearly. */
+.tele-topics {
     position: relative;
-    z-index: 1;
+    z-index: 3;
+    width: 100%;
+    margin: 0 auto;
+    padding: 90px 60px 60px;
 }
 
-.hero .container {
+.tele-heading {
+    font-family: 'Caveat', cursive;
+    font-size: 3rem;
+    color: var(--telestrator);
+    text-align: center;
+    margin-bottom: 24px;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.95);   /* hard, no-blur drop shadow */
+}
+
+.tele-grid {
+    display: grid;
+    grid-template-columns: 1fr 30vw 1fr;  /* middle column intentionally empty */
+    column-gap: 18px;
+    row-gap: 16px;
+    align-content: start;
+}
+
+.tele-topic {
+    background: rgba(17, 20, 24, 0.92);
+    border: 2px solid var(--telestrator);
+    border-radius: 8px;
+    padding: 14px 18px;
+    opacity: 0;
+}
+
+/* Distribute 8 topics across left (col 1) and right (col 3) columns,
+   skipping the empty middle. Detailed cards lead each side. */
+.tele-topic[data-topic="1"] { grid-column: 1; grid-row: 1; }   /* Laravel       (detailed) */
+.tele-topic[data-topic="2"] { grid-column: 3; grid-row: 1; }   /* Vue           (detailed) */
+.tele-topic[data-topic="3"] { grid-column: 1; grid-row: 2; }   /* Vue Flow */
+.tele-topic[data-topic="4"] { grid-column: 3; grid-row: 2; }   /* Mind-Map Canvas */
+.tele-topic[data-topic="5"] { grid-column: 1; grid-row: 3; }   /* Reactive hydration */
+.tele-topic[data-topic="6"] { grid-column: 3; grid-row: 3; }   /* CASL */
+.tele-topic[data-topic="7"] { grid-column: 3; grid-row: 4; }   /* Dynamic snippets */
+.tele-topic[data-topic="8"] { grid-column: 1; grid-row: 4; }   /* Scrivener import */
+
+.tele-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #060a10;
+    background: var(--telestrator);
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+}
+
+.tele-topic h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.tele-topic.detailed h3 {
+    font-size: 1.6rem;
+}
+
+.tele-subs {
+    list-style: none;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 26px;
+}
+
+.tele-subs li {
+    color: var(--telestrator);
+    font-family: 'Caveat', cursive;
+    font-size: 1.4rem;
+    opacity: 0;
+    position: relative;
+    padding-left: 18px;
+}
+
+.tele-subs li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    font-size: 1rem;
+}
+
+/* ============================================
+   SCENE 7: REPLAY REEL
+   ============================================ */
+.scene-replay {
+    background: transparent;
+}
+
+.replay-bg {
+    position: absolute;
+    inset: 0;
+}
+
+.replay-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(6, 10, 16, 0.55);
+}
+
+.replay-title {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #ffffff;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    padding: 100px 40px 0;
+    text-shadow: 4px 4px 0 #060a10;   /* hard (no-blur) drop shadow */
+}
+
+.replay-title s {
+    color: var(--broadcast-accent);
+    text-decoration-thickness: 3px;
+}
+
+.pip-grid {
+    position: relative;
+    z-index: 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-    width: 100%;
-}
-
-.hero-content {
-    text-align: left;
-    position: relative;
-}
-
-.drone-top {
-    width: 80px;
-    height: 80px;
-    filter: brightness(0.3) drop-shadow(0 5px 15px rgba(0, 0, 0, 0.15));
-    animation: orbit 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
-    position: absolute;
-    top: -80px;
-    left: 0px;
-    transform: translateX(-50%);
-}
-
-.name-with-portrait {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 20px;
-    padding-top: 5rem;
-}
-
-.portrait-wrapper {
-    position: relative;
-    display: inline-block;
-    overflow: visible;
-    padding-top: 25px;
-}
-
-.portrait {
-    width: 260px;
-    height: auto;
-    flex-shrink: 0;
-    animation: slideDown 0.8s ease-out 0.05s backwards;
-}
-
-.hero-graphics {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.title {
-    font-size: 2.8rem;
-    font-weight: 800;
-    margin-bottom: 0;
-    animation: slideDown 0.8s ease-out;
-    line-height: 1.1;
-}
-
-.subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 25px;
-    opacity: 0.95;
-    animation: slideDown 0.8s ease-out 0.1s backwards;
-    font-weight: 600;
-}
-
-.description {
-    font-size: 1rem;
-    max-width: 100%;
-    margin: 0 0 40px 0;
-    opacity: 0.9;
-    animation: slideDown 0.8s ease-out 0.2s backwards;
-    line-height: 1.7;
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* CTA Buttons */
-.button-group {
-    display: flex;
-    gap: 0;
-    align-items: stretch;
-    width: fit-content;
+    gap: 32px;
+    max-width: 1100px;
     margin: 0 auto;
-    animation: slideDown 0.8s ease-out 0.3s backwards;
+    padding: 32px 40px 60px;
+}
+
+.pip {
+    position: relative;
+    background: #111418;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.4);
+}
+
+.pip-frame {
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1f26, #0c1014);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    overflow: hidden;
+}
+
+.pip-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.pip figcaption {
+    padding: 12px 16px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.replay-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(230, 57, 70, 0.95);
+    color: #ffffff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+.replay-badge .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ffffff;
+    animation: blinkRed 1.1s ease-in-out infinite;
+}
+
+@keyframes blinkRed {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.25; }
+}
+
+/* ============================================
+   SCENE 8: GOAL (CTA)
+   ============================================ */
+.scene-goal {
+    background: linear-gradient(180deg, #0a1422 0%, var(--ice-dark) 60%, var(--ice) 100%);
+}
+
+.goal-stage {
+    position: absolute;
+    inset: 0;
+}
+
+.goal-cta {
+    position: absolute;
+    left: 50%;
+    bottom: calc(12% + 200px);   /* raised 200px from original resting spot */
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 3;
+    opacity: 0;
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    padding: 32px 44px;
+    border-radius: 12px;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.25);
+}
+
+.goal-cta h2 {
+    font-size: clamp(1.5rem, 3vw, 2.4rem);
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+.goal-cta p {
+    color: var(--secondary);
+    margin-bottom: 22px;
+}
+
+.goal-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    pointer-events: auto;
 }
 
 .btn {
-    padding: 12px 20px;
+    padding: 12px 22px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.3s ease;
+    font-size: 0.95rem;
     border: 2px solid;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    white-space: nowrap;
-    box-sizing: border-box;
-}
-
-.button-group .btn {
-    border-radius: 0;
-    margin: 0;
-}
-
-.button-group .btn:first-child {
-    border-radius: 8px 0 0 8px;
-}
-
-.button-group .btn:last-child {
-    border-radius: 0 8px 8px 0;
-    padding: 12px 12px;
+    transition: all 0.2s ease;
+    font-family: inherit;
 }
 
 .btn-primary {
-    background: #333333;
+    background: var(--primary);
     color: #ffffff;
-    border-color: #333333;
+    border-color: var(--primary);
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    background: #555555;
-    border-color: #555555;
+    background: #000000;
+    border-color: #000000;
+    transform: translateY(-1px);
 }
 
 .btn-secondary {
     background: transparent;
-    color: #333333;
-    border-color: #333333;
+    color: var(--primary);
+    border-color: var(--primary);
 }
 
 .btn-secondary:hover {
-    background: #333333;
+    background: var(--primary);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.btn-secondary.copied {
+    background: #2a9d4a;
+    border-color: #2a9d4a;
     color: #ffffff;
 }
 
-/* Hero Icons */
-.hero-icons {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    justify-content: center;
-    align-items: center;
-    animation: slideDown 0.8s ease-out 0.4s backwards;
-    width: 100%;
-}
+/* ============================================
+   RESPONSIVE — MOBILE LAYOUT (<= 768px)
+   ============================================
+   The desktop site is a scroll-jacked broadcast: 8 pinned
+   ScrollTrigger scenes on fixed-pixel SVG stages. That doesn't
+   survive a phone viewport, so main.js skips every pinned timeline
+   on mobile and each scene flows as a normal stacked section here.
 
-.hero-icon {
-    width: 120px;
-    height: 120px;
-    filter: brightness(0.3) drop-shadow(0 5px 15px rgba(0, 0, 0, 0.15));
-}
+   Rules of this block:
+   - Scenes lay out in normal document flow (no 100vh, no pinning).
+   - Absolute overlays (callouts, project cards, CTA) become static,
+     single-column flow.
+   - Motion-path SVG stages (long-shift, breakaway, tic-tac-toe,
+     telestrator frozen play) are hidden — their content shows as
+     stacked cards instead.
+   - Kept SVG stages (warmup, face-off, goal net) scale to fit.
+   - Sections fade up via `.in-view`, toggled by the mobile
+     ScrollTrigger observer in main.js.
+   ============================================ */
+@media (max-width: 768px) {
+    /* ---- Scene flow ---- */
+    .scene {
+        min-height: auto;
+        overflow: visible;
+    }
 
-.hero-icon:nth-child(1) {
-    animation: bounce 2s cubic-bezier(0.42, 0, 0.58, 1) infinite;
-    animation-delay: 0s;
-}
+    /* Kept stages (warmup, face-off, long-shift, goal) size via their
+       container; hidden stages are display:none. No global svg height
+       override is needed — each kept stage sets its own height below. */
 
-.hero-icon:nth-child(2) {
-    animation: sway 3s cubic-bezier(0.42, 0, 0.58, 1) infinite;
-    animation-delay: 0s;
-}
+    /* Scroll-into-view fade. Sections start dimmed + nudged down;
+       main.js adds `.in-view` as each scene enters the viewport. */
+    .scene-faceoff,
+    .scene-shift,
+    .scene-breakaway,
+    .scene-ttt,
+    .scene-telestrator,
+    .scene-replay,
+    .scene-goal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
 
-.hero-icon:nth-child(3) {
-    animation: orbit 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
-    animation-delay: 0s;
-}
+    .scene.in-view {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-}
+    /* ---- Persistent rink — fixed-pixel pan math is desktop-only ---- */
+    .persistent-rink {
+        display: none;
+    }
 
-@keyframes sway {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(20px); }
-}
+    /* ---- Broadcast chrome ---- */
+    .lower-third {
+        bottom: 16px;
+        left: 12px;
+        right: 12px;
+        padding: 10px 16px;
+        min-width: 0;
+        max-width: none;
+    }
 
-@keyframes orbit {
-    0% { transform: translateY(-40px) translateX(50px); }
-    /* 5% { transform: translateY(-8px) translateX(8px); }
-    10% { transform: translateY(-15px) translateX(15px); }
-    15% { transform: translateY(-8px) translateX(8px); }
-    20% { transform: translateY(0) translateX(0); } */
-    25% { transform: translateY(45px) translateX(20px); }
-    /* 30% { transform: translateY(15px) translateX(-15px); }
-    35% { transform: translateY(15px) translateX(-10px); }
-    40% { transform: translateY(15px) translateX(-15px); }
-    45% { transform: translateY(15px) translateX(0); } */
-    50% { transform: translateY(35px) translateX(50px); }
-    /* 55% { transform: translateY(8px) translateX(15px); }
-    60% { transform: translateY(-15px) translateX(15px); }
-    65% { transform: translateY(-8px) translateX(8px); }
-    70% { transform: translateY(0) translateX(0); } */
-    75% { transform: translateY(0px) translateX(65px); }
-    /* 80% { transform: translateY(15px) translateX(-15px); }
-    85% { transform: translateY(8px) translateX(-8px); }
-    90% { transform: translateY(0) translateX(0); }
-    95% { transform: translateY(-5px) translateX(5px); } */
-    100% { transform: translateY(-40px) translateX(50px); }
-}
+    .lt-story {
+        font-size: 0.82rem;
+    }
 
-/* Skills Section */
-.skills {
-    display: none;
-    padding: 120px 0;
-    background: var(--bg-light);
-    position: relative;
-    z-index: 2;
-}
+    .scoreboard {
+        top: 64px;
+        right: 12px;
+        font-size: 0.6rem;
+        padding: 6px 10px;
+    }
 
-.skills h2,
-.projects h2,
-.contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 60px;
-    text-align: center;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
+    /* ---- Scene 1: Warmup — kept; non-pinned puck-drop intro runs ---- */
+    .scene-warmup {
+        min-height: 100vh;
+    }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
+    /* ---- Scene 2: Face-off — kept, SVG scales; freeze final state ----
+       .faceoff-stage IS the <svg>. The desktop `.scene svg { height:
+       100vh }` rule has higher specificity, so the override below is
+       scoped under `.scene-faceoff` to win. */
+    .scene-faceoff {
+        padding: 40px 0;
+    }
 
-.skill-card {
-    background: var(--white);
-    padding: 40px 30px;
-    border-radius: 12px;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-}
+    .scene-faceoff .faceoff-stage {
+        position: relative;
+        height: 60vh;
+    }
 
-.skill-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15);
-}
+    /* Static fallback: show the clip circle at its full radius so the
+       photo matte reads without the iris-expand animation. */
+    .faceoff-clip-circle {
+        r: 220;
+    }
 
-.skill-icon {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 20px;
-    filter: brightness(0) saturate(100%) invert(20%) sepia(84%) saturate(1205%) hue-rotate(234deg) brightness(99%) contrast(92%);
-    transition: filter 0.3s ease;
-}
+    /* ---- Scene 3: Long-shift — motion path dropped, SVG kept static ----
+       Scene 3's only content is the SVG (the FILM photo cards live as
+       <image> elements inside it). Rather than hide it and leave the
+       scene empty, keep the SVG scaled to fit and show the scattered
+       photo cards frozen in their final, fully-revealed state. The
+       boards-path traveller is hidden since there's no scroll motion. */
+    .scene-shift {
+        padding: 0 0 400px;
+    }
 
-.skill-card:hover .skill-icon {
-    filter: brightness(0) saturate(100%) invert(27%) sepia(49%) saturate(1339%) hue-rotate(259deg) brightness(97%) contrast(93%);
-}
+    /* Size the SVG to its own 2:1 viewBox ratio (instead of the desktop
+       100vh) so the section height matches the collage exactly. The
+       scene has zero padding, so it butts against the next section
+       like every other mobile section. */
+    .scene-shift .shift-stage {
+        position: relative;
+        height: auto;
+        aspect-ratio: 1600 / 800;
+    }
 
-.skill-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    color: var(--text);
-}
+    .scene-shift .year-marker {
+        opacity: 1;
+    }
 
-.skill-card p {
-    color: var(--text-light);
-    font-size: 0.95rem;
-}
+    .shift-traveller {
+        display: none;
+    }
 
-/* Projects Section */
-.projects {
-    display: none;
-    padding: 120px 0;
-    position: relative;
-    z-index: 2;
-}
+    /* ---- Scene 4: Breakaway — motion path dropped, callouts stack ----
+       Top padding is 30px; combined with the long-shift scene's 30px
+       bottom padding it gives a 60px gap between FOCUS PULLER and
+       STARTUPS. */
+    .scene-breakaway {
+        padding: 30px 16px 56px;
+    }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
+    .scene-breakaway .breakaway-stage {
+        display: none;
+    }
 
-.project-card {
-    background: var(--white);
-    border-radius: 12px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    border-top: 4px solid;
-}
-
-.project-card.software {
-    border-top-color: var(--primary);
-}
-
-.project-card.making {
-    border-top-color: var(--accent-2);
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-}
-
-.project-icon {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
-    padding: 20px;
-}
-
-.project-card.making .project-icon {
-    background: linear-gradient(135deg, rgba(78, 205, 196, 0.1), rgba(255, 230, 109, 0.1));
-}
-
-.project-icon img {
-    width: 100px;
-    height: 100px;
-    filter: brightness(0) saturate(100%) invert(100%);
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover .project-icon img {
-    transform: scale(1.1);
-}
-
-.project-icon-img.sway {
-    animation: sway 3s ease-in-out infinite;
-}
-
-.project-icon-img.orbit {
-    animation: orbit 10s linear infinite;
-}
-
-.project-card h3 {
-    padding: 20px 20px 10px;
-    font-size: 1.4rem;
-    color: var(--text);
-}
-
-.project-type {
-    padding: 0 20px;
-    font-size: 0.85rem;
-    color: var(--primary);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.project-card.making .project-type {
-    color: var(--accent-2);
-}
-
-.project-card p:not(.project-type) {
-    padding: 0 20px;
-    color: var(--text-light);
-    font-size: 0.95rem;
-}
-
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 20px;
-}
-
-.project-tags span {
-    background: var(--bg-light);
-    color: var(--primary);
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
-}
-
-.project-card.making .project-tags span {
-    background: rgba(78, 205, 196, 0.1);
-    color: var(--accent-2);
-}
-
-/* Contact Section */
-.contact {
-    padding: 120px 0;
-    background: var(--bg-light);
-    text-align: center;
-    position: relative;
-    z-index: 2;
-}
-
-.contact p {
-    font-size: 1.1rem;
-    color: var(--text-light);
-    margin-bottom: 30px;
-}
-
-/* Footer */
-.footer {
-    /* background: linear-gradient(180deg, var(--bg-light) 70%, var(--accent-3) 100%); */
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0)) 0%, var(--accent-3) 100%);
-    color: var(--white);
-    text-align: center;
-    padding: 30px;
-    position: relative;
-    z-index: 2;
-}
-/* Responsive */
-@media (max-width: 1024px) {
-    .hero .container {
-        grid-template-columns: 1fr;
+    .breakaway-callouts {
+        position: static;
+        display: flex;
+        flex-direction: column;
         gap: 40px;
     }
 
-    .hero-content {
-        text-align: center;
-    }
-
-    .name-with-portrait {
-        justify-content: center;
+    .callout,
+    .callout[data-callout="1"],
+    .callout[data-callout="2"] {
+        position: static;
         flex-direction: column;
-        margin-bottom: 25px;
+        align-items: center;
+        gap: 41px;
+        opacity: 1;
+        top: auto;
+        left: auto;
+        right: auto;
     }
 
-    .title {
-        font-size: 2.5rem;
+    /* Photo cluster leads, text card follows. */
+    .callout-photos {
+        order: 0;
+        width: 220px;
+        height: 360px;
     }
 
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .title {
-        font-size: 2.5rem;
+    .callout-text {
+        order: 1;
+        max-width: 100%;
     }
 
-    .subtitle {
-        font-size: 1.3rem;
+    .callout-photos .scatter {
+        width: 180px;
+        height: 135px;
     }
 
-    .nav-menu {
-        gap: 20px;
+    /* ---- Scene 5: Tic-tac-toe — lanes dropped, cards stack ---- */
+    .scene-ttt {
+        padding: 56px 16px;
     }
 
-    .hero-icons {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 30px;
+    .scene-ttt .ttt-stage {
+        display: none;
     }
 
-    .hero-icon {
-        width: 80px;
-        height: 80px;
+    .ttt-cards {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
     }
 
-    .skills h2,
-    .projects h2,
-    .contact h2 {
-        font-size: 2rem;
+    /* Project cards carry inline top/left/transform styles for the
+       desktop scatter layout — `!important` is needed to override them
+       so every card flows centered in the stacked mobile column.
+       Without this the Wrioter card (data-card="3") keeps its inline
+       translateX(-50%) and renders shifted left. */
+    .proj-card,
+    .proj-card[data-card="1"],
+    .proj-card[data-card="2"],
+    .proj-card[data-card="3"],
+    .proj-card[data-card="4"],
+    .proj-card[data-card="5"] {
+        position: static !important;
+        width: 100%;
+        max-width: 360px;
+        opacity: 1;
+        top: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
     }
 
-    .projects-grid {
+    /* ---- Scene 6: Telestrator — frozen play dropped, grid stacks ---- */
+    .scene-telestrator {
+        padding: 56px 0;
+    }
+
+    .scene-telestrator .tele-stage {
+        display: none;
+    }
+
+    .tele-topics {
+        padding: 24px 16px;
+    }
+
+    .tele-heading {
+        font-size: 2.2rem;
+    }
+
+    .tele-grid {
+        grid-template-columns: 1fr;   /* drop the empty middle column */
+        column-gap: 0;
+    }
+
+    /* Override the desktop left/right column placement so all 8 topics
+       flow in a single column in source order. */
+    .tele-topic,
+    .tele-topic[data-topic="1"],
+    .tele-topic[data-topic="2"],
+    .tele-topic[data-topic="3"],
+    .tele-topic[data-topic="4"],
+    .tele-topic[data-topic="5"],
+    .tele-topic[data-topic="6"],
+    .tele-topic[data-topic="7"],
+    .tele-topic[data-topic="8"] {
+        grid-column: 1;
+        grid-row: auto;
+        opacity: 1;
+    }
+
+    .tele-subs li {
+        opacity: 1;
+    }
+
+    /* ---- Scene 7: Replay reel — kept, grid collapses to 1 column ---- */
+    .scene-replay {
+        padding: 40px 0;
+    }
+
+    .replay-title {
+        padding: 56px 20px 0;
+    }
+
+    .pip-grid {
         grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .title {
-        font-size: 2rem;
+        padding: 24px 20px 48px;
     }
 
-    .hero-icon {
-        width: 60px;
-        height: 60px;
+    /* ---- Scene 8: Goal — net SVG static, CTA flows in normally ---- */
+    .scene-goal {
+        min-height: 100vh;
+        padding: 40px 0;
     }
 
-    .nav-menu {
-        gap: 15px;
-        font-size: 0.9rem;
+    .scene-goal .goal-stage {
+        position: relative;
+        height: 50vh;
     }
 
-    .logo .emoji {
-    font-family: system-ui, -apple-system, sans-serif;
-    filter: brightness(1.2);
-}
+    .goal-cta {
+        position: static;
+        transform: none;
+        opacity: 1;
+        width: auto;
+        margin: 24px 16px 0;
+        padding: 24px 24px;
+    }
+
+    .goal-actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
 }

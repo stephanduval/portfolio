@@ -20,6 +20,8 @@ EXCLUDES=(
   "--exclude=.well-known/"
   "--exclude=storage/"
   "--exclude=.env"
+  "--exclude=.claude/"
+  "--exclude=development files/"
 )
 
 echo "🚀 Building resume..."
