@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.5.18)  21 MAY 2026 11:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.5.18)  21 MAY 2026 20:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -770,73 +770,73 @@ nput line 166.
 (/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/ufontawesomefree3.fd)
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
-(Font)              using `OT1/cmr/bx/n' instead on input line 178.
+(Font)              using `OT1/cmr/bx/n' instead on input line 179.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 182.
+(Font)              <10.95> on input line 183.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 182.
+(Font)              <8> on input line 183.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 182.
+(Font)              <6> on input line 183.
 
-Overfull \hbox (0.55968pt too wide) in paragraph at lines 220--222
+Overfull \hbox (0.55968pt too wide) in paragraph at lines 221--223
 []  
  []
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 229.
+Package hyperref Warning: Suppressing link with empty target on input line 230.
 
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 229.
+Package hyperref Warning: Suppressing link with empty target on input line 230.
 
 
 
-Overfull \hbox (0.55968pt too wide) in paragraph at lines 229--231
+Overfull \hbox (0.55968pt too wide) in paragraph at lines 230--232
 []  
  []
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 239.
+Package hyperref Warning: Suppressing link with empty target on input line 240.
 
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 239.
+Package hyperref Warning: Suppressing link with empty target on input line 240.
 
 
 
-Overfull \hbox (0.55968pt too wide) in paragraph at lines 239--241
+Overfull \hbox (0.55968pt too wide) in paragraph at lines 240--242
 []  
  []
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 248.
+Package hyperref Warning: Suppressing link with empty target on input line 249.
 
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 248.
+Package hyperref Warning: Suppressing link with empty target on input line 249.
 
 
 
-Overfull \hbox (0.55968pt too wide) in paragraph at lines 248--250
+Overfull \hbox (0.55968pt too wide) in paragraph at lines 249--251
 []  
  []
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 259.
+Package hyperref Warning: Suppressing link with empty target on input line 260.
 
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 259.
+Package hyperref Warning: Suppressing link with empty target on input line 260.
 
 
 
-Overfull \hbox (0.55968pt too wide) in paragraph at lines 259--261
+Overfull \hbox (0.55968pt too wide) in paragraph at lines 260--262
 []  
  []
 
 
-Overfull \hbox (0.55968pt too wide) in paragraph at lines 273--275
+Overfull \hbox (0.55968pt too wide) in paragraph at lines 274--276
 []  
  []
 
@@ -849,30 +849,30 @@ st/fonts/enc/dvips/fontawesome5/fa5free2.enc}{/usr/share/texlive/texmf-dist/fon
 ts/enc/dvips/fontawesome5/fa5free1.enc}{/usr/share/texlive/texmf-dist/fonts/enc
 /dvips/fontawesome5/fa5brands0.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvi
 ps/fontawesome5/fa5free3.enc}]
-Overfull \hbox (12.12805pt too wide) in alignment at lines 281--281
+Overfull \hbox (12.12805pt too wide) in alignment at lines 282--282
 [] [] 
  []
 
 
-Overfull \hbox (0.55968pt too wide) in paragraph at lines 281--283
+Overfull \hbox (0.55968pt too wide) in paragraph at lines 282--284
 []  
  []
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 293.
+Package hyperref Warning: Suppressing link with empty target on input line 294.
 
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 293.
+Package hyperref Warning: Suppressing link with empty target on input line 294.
 
 
 
-Overfull \hbox (0.55968pt too wide) in paragraph at lines 293--295
+Overfull \hbox (0.55968pt too wide) in paragraph at lines 294--296
 []  
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 310.
+(Font)              <12> on input line 311.
 
 
 [2{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
@@ -909,11 +909,11 @@ share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf/fonts/t
 ype1/public/cm-super/sfrm1095.pfb>
-Output written on "./20230501 Stephan DuVal Resume.pdf" (2 pages, 177767 bytes)
+Output written on "./20230501 Stephan DuVal Resume.pdf" (2 pages, 178260 bytes)
 .
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
- 94 compressed objects within 1 object stream
+ 126 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
  9 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

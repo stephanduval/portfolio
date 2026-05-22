@@ -338,7 +338,6 @@ h1, h2, h3 {
    ============================================ */
 .scene-shift {
     background: transparent;
-    border-bottom: 3px solid #000000;
 }
 
 /* FILM photo cards — scattered, faded in by GSAP stagger */
