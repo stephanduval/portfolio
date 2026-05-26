@@ -881,9 +881,28 @@ h1, h2, h3 {
         transform: translateY(0);
     }
 
-    /* ---- Persistent rink — fixed-pixel pan math is desktop-only ---- */
+    /* ---- Persistent rink — stretch behind all stacked scenes ---- */
     .persistent-rink {
-        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 0;
+        pointer-events: none;
+        display: block;
+        transform: none;
+    }
+
+    .persistent-rink-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .persistent-rink.rink-visible {
+        opacity: 0.35;
     }
 
     /* ---- Broadcast chrome ---- */

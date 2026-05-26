@@ -276,7 +276,11 @@ function setupPersistentRink() {
     });
 }
 
-if (!isMobile) {
+if (isMobile) {
+    // On mobile the rink is position:absolute and spans the full page —
+    // no GSAP pan needed. Just make it visible immediately.
+    persistentRinkEl?.classList.add('rink-visible');
+} else {
     if (persistentRink?.complete) {
         setupPersistentRink();
     } else if (persistentRink) {
