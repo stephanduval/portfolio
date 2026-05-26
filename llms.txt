@@ -1,0 +1,34 @@
+# Stephan Douglas DuVal
+
+> Full Stack Software Engineer with 18+ years building production web applications. Founder of eSnail.ca and MailClerk.com. Based in Missoula, Montana.
+
+## About
+
+Stephan Douglas DuVal is a full stack software engineer who has founded and operated two software companies and led engineering teams in industry-academic collaborations. He builds across the stack — PHP/Laravel/Symfony on the backend, Vue 3 and React with TypeScript on the frontend, and MySQL/SQLite for data.
+
+## Current Work
+
+- [Wrioter](https://portfolio.stephandouglasduval.com/): Online writing software for long-form authors. Vue 3, Laravel 11, TypeScript, MySQL.
+- [3D Printing Services Missoula](https://portfolio.stephandouglasduval.com/): Marketplace for 3D printing estimates and business listings.
+
+## Skills
+
+Languages: PHP, JavaScript, TypeScript, C++, SQL.
+Frameworks: Laravel, Symfony, Vue 3, Vuetify, React, Electron, Kohana, Pinia, Vite.
+Databases: MySQL, SQLite.
+Integrations: Stripe, Moneris, Resend, Notarize.com, Sanctum auth, RS-232.
+Other: ArduPilot, 3D printing, CNC, LoRa.
+
+## Past Projects
+
+- MailClerk.com (2020–2021): SMB mail management software with Stripe billing. PHP, Symfony.
+- LayoverBox (2016–2020): Smart parcel-receiving mailbox built with UBC Electrical Engineering Capstone. React, Electron, RS-232.
+- eSnail.ca (2008–2023): Online postal-mail viewing service operated for 15 years across 3 franchises. PHP, Kohana.
+- Freynet-Gagne Customer Portal (2022–2023): Government translation workflow portal. Vue, Laravel.
+
+## Contact
+
+- Email: applications@mail.stephandouglasduval.com
+- LinkedIn: https://www.linkedin.com/in/stephanduval/
+- GitHub: https://github.com/stephanduval
+- Resume: https://portfolio.stephandouglasduval.com/assets/resume.pdf
