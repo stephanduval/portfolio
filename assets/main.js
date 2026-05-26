@@ -694,6 +694,21 @@ gsap.timeline({
 }
 
 // ============================================================
+// LOWER-THIRD MINIMIZE — tap the whole caption box to toggle
+// ============================================================
+// State persists across scene changes within the session.
+if (lowerThirdEl) {
+    const toggle = () => lowerThirdEl.classList.toggle('minimized');
+    lowerThirdEl.addEventListener('click', toggle);
+    lowerThirdEl.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggle();
+        }
+    });
+}
+
+// ============================================================
 // MOBILE SCENE PATH — non-pinned caption + fade-in
 // ============================================================
 // On mobile every scene flows as a normal stacked section. A single
