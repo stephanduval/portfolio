@@ -266,6 +266,11 @@ h1, h2, h3 {
     text-transform: uppercase;
 }
 
+/* "ROOKIE YEAR" label in red when minimized */
+.lower-third[data-active-scene="rookie-year"].minimized .lt-label {
+    color: var(--broadcast-accent);
+}
+
 .lt-text {
     font-size: 1.05rem;
     font-weight: 700;
@@ -914,6 +919,11 @@ h1, h2, h3 {
      ScrollTrigger observer in main.js.
    ============================================ */
 @media (max-width: 768px) {
+    /* Hide desktop-only navbar links on mobile */
+    .icon-btn-desktop-only {
+        display: none;
+    }
+
     /* ---- Scene flow ---- */
     .scene {
         min-height: auto;

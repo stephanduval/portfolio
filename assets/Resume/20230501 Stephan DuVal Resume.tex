@@ -1,7 +1,7 @@
 %-------------------------
-% Resume in Latex
-% Author : Abey George
-% Based off of: https://github.com/sb2nov/resume
+% Resume in LaTeX — ATS-friendly single-column layout
+% Author : Stephan Douglas DuVal
+% Based on Abey George / sb2nov template
 % License : MIT
 %------------------------
 
@@ -18,25 +18,17 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{fontawesome5}
-\usepackage{multicol}
 \usepackage{graphicx}
- \usepackage{setspace}
-\setlength{\multicolsep}{-3.0pt}
-\setlength{\columnsep}{-1pt}
+\usepackage{setspace}
 \input{glyphtounicode}
-
 
 \usepackage{tikz}
 \usetikzlibrary{svg.path}
 \usepackage{xcolor}
-\usepackage{fontawesome5}
-
 
 \definecolor{cvblue}{HTML}{0E5484}
 \definecolor{black}{HTML}{130810}
 \definecolor{darkcolor}{HTML}{0F4539}
-\definecolor{cvgreen}{HTML}{3BD80D}
-\definecolor{taggreen}{HTML}{00E278}
 \definecolor{SlateGrey}{HTML}{2E2E2E}
 \definecolor{LightGrey}{HTML}{666666}
 \colorlet{name}{black}
@@ -47,27 +39,7 @@
 \colorlet{emphasis}{SlateGrey}
 \colorlet{body}{LightGrey}
 
-
-
-%----------FONT OPTIONS in
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
-% \pagestyle{fancy}
-% \fancyhf{}  % clear all header and footer fields
-% \fancyfoot{}
-% \renewcommand{\headrulewidth}{0pt}
-% \renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
+% Margins
 \addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.19in}
@@ -80,12 +52,12 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
+% Sections
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule ]
 
-% Ensure that generate pdf is machine readable/ATS parsable
+% Ensure generated PDF is ATS-parsable (maps glyphs to Unicode)
 \pdfgentounicode=1
 
 %-------------------------
@@ -102,28 +74,13 @@
   }
 }
 
-\newcommand{\classesList}[4]{
-    \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
-  }
-}
-
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{\large#1} & \textbf{\small #2} \\
       \textit{\large#3} & \textit{\small #4} \\
-      
     \end{tabular*}\vspace{-7pt}
 }
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
@@ -131,8 +88,6 @@
       \small#1 & \textbf{\small #2}\\
     \end{tabular*}\vspace{-7pt}
 }
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
@@ -142,226 +97,152 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-
-\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
-
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \begin{document}
 
 %----------HEADING----------
-
-
 \begin{center}
-    {\Huge \scshape Stephan Douglas DuVal} \\ \vspace{1pt}
+    {\Huge \scshape Stephan Douglas DuVal} \\ \vspace{2pt}
+    \small Full Stack Software Engineer \\ \vspace{4pt}
 
-    \small
-    \href{tel:+17787883800}{ \raisebox{-0.1\height}\faPhone\ \underline{+1-778-788-3800} ~} \href{mailto:applications@mail.stephandouglasduval.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{applications@mail.stephandouglasduval.com}} ~
-    \href{https://www.linkedin.com/in/stephanduval/}{\raisebox{-0.2\height}\faLinkedin\ \underline{Stephan DuVal}}  ~
-    \href{https://github.com/stephanduval}{\raisebox{-0.2\height}\faGithub\ \underline{stephanduval}} ~
-    \setstretch{1.25}
-
-    \href{https://portfolio.stephandouglasduval.com}{\raisebox{-0.2\height}\faUser\  \underline{Resume Website}} ~
-    \href{https://wgu.joinhandshake.com/profiles/sduval}{\raisebox{-0.2\height}\faLink\ \underline{Handshake}} ~
-
-
-
-
-
-
+    \href{tel:+17787883800}{\raisebox{-0.1\height}\faPhone\ +1-778-788-3800} ~
+    \href{mailto:applications@mail.stephandouglasduval.com}{\raisebox{-0.2\height}\faEnvelope\ applications@mail.stephandouglasduval.com} ~
+    \href{https://www.linkedin.com/in/stephanduval/}{\raisebox{-0.2\height}\faLinkedin\ linkedin.com/in/stephanduval} \\ \vspace{2pt}
+    \href{https://github.com/stephanduval}{\raisebox{-0.2\height}\faGithub\ github.com/stephanduval} ~
+    \href{https://portfolio.stephandouglasduval.com}{\raisebox{-0.2\height}\faUser\ portfolio.stephandouglasduval.com} ~
+    \href{https://wgu.joinhandshake.com/profiles/sduval}{\raisebox{-0.2\height}\faLink\ wgu.joinhandshake.com/profiles/sduval} \\ \vspace{2pt}
+    \href{https://www.imdb.com/name/nm4179709/?ref_=fn_t_2}{\raisebox{-0.2\height}\faImdb\ imdb.com/name/nm4179709}
 \end{center}
 
-\hspace{20 mm}
+%----------PROFILE----------
+\section{PROFILE}
+\small
+Full Stack Software Engineer with 18+ years building, shipping, and operating production web applications. Founded and directed two software companies (eSnail.ca, MailClerk.com) and led software and hardware engineering teams in industry-academic capstone projects. Comfortable across the stack: PHP / Laravel / Symfony, Vue 3 and React with TypeScript, MySQL, and payments integration (Stripe, Moneris). Currently building Wrioter, a writing platform for long-form authors.
+\vspace{4pt}
 
-%-----------EDUCATION-----------
-\section{EDUCATION}
-\resumeSubHeadingListStart
-\resumeSubheading
-{University of Alberta}{JAN 2003 -- AUG 2007}
-{\textbf{BA English} - \textbf{Film}}{Edmonton, Alberta}
-\resumeSubHeadingListEnd
-
-\resumeSubHeadingListStart
-\resumeSubheading
-{Western Governors University}{July 2026 -- Ongoing}
-{\textbf{Bachelors of Science} - \textbf{Computer Science}}{Salt Lake City, Utah}
-
-\resumeSubHeadingListEnd
-
-
-\hspace{5 mm}
-
-%------RELEVANT COURSEWORK-------
+%----------SKILLS----------
 \section{SKILLS}
-%\resumeSubHeadingListStart
-\begin{multicols}{4}
-    \begin{itemize}[itemsep=-2pt, parsep=5pt]
-        \item Software Development
-        \item Project Completion
-        \item Leadership
-        \item Team Management
-        \item Creativity
-        \item Client Relations
-    \end{itemize}
-\end{multicols}
-\vspace*{2.0\multicolsep}
-%\resumeSubHeadingListEnd
-
-\hspace{5mm}
-
-%-----------PROJECTS-----------
-\section{EXPERIENCE}
-\setstretch{1.25}
-
-
-\resumeSubHeadingListStart
-  \resumeProjectHeading
-    {\href{https://3dprint.stephandouglasduval.com}{\textbf{\large{{3D Printing Services Missoula}}} \href{https://3dprint.stephandouglasduval.com}{ }} $|$ {\underline{PHP/JS/HTML}}}{May 2026}
-  \resumeItemListStart
-    \resumeItemNoBullet{\normalsize{Proof of concept website to support my 3D printing hobby. Customers can upload their files and get instand estimates before ordering. Anyone can use the site to register their own 3D printing businesses and connect with new customers.}}
-  \resumeItemListEnd
-\resumeSubHeadingListEnd
-
-
-\resumeSubHeadingListStart
-  \resumeProjectHeading
-    {\href{}{\textbf{\large{{Wrioter Writing Software}}} \href{}{ }} $|$ {\underline{VueJS/mySQL/Laravel}}}{January 2023 - Ongoing}
-  \resumeItemListStart
-    \resumeItemNoBullet{\normalsize{Lead developer on a online-only writing software. Features include mindmaps, visualizations and drag and drop organization for complex multi chapter writing projects.}}
-  \resumeItemListEnd
-  
-\resumeSubHeadingListEnd
-
-
-\resumeSubHeadingListStart
-  \resumeProjectHeading
-    {\href{}{\textbf{\large{{Freynet-Gagne Customer Portal}}} \href{}{ }} $|$ {\underline{VueJS/mySQL/Laravel}}}{Dec 2022 - Feb 2023}
-  \resumeItemListStart
-    \resumeItemNoBullet{\normalsize{Customer had a contract that required a portal where government agents could iniatiate, track and approve changes to translations of official documents.}} 
-  \resumeItemListEnd
-  
-\resumeSubHeadingListEnd
-
-\resumeSubHeadingListStart
-  \resumeProjectHeading
-    {\href{}{\textbf{\large{{Lead Developer - Cognitive Research Project}}} \href{}{ }} $|$ {\underline{React/Redux}}}{Jun 2021 - Nov 2022}
-  \resumeItemListStart
-    \resumeItemNoBullet{\normalsize{An approved doctoral thesis research project hosted by the University of Missoula.
-     Used Redux and React Hooks to create an interactive site that logs user input and their response to visual
-      stimuli as they navigate the website.  User activity was logged for data processing as part of the research
-       project.  The project was successful in gathering new categories of timing data which pivoted the thesis 
-       project. Client asked for two new tests to be developed.}}
-  \resumeItemListEnd
-  
-
-  \resumeProjectHeading
-    {\href{}{\textbf{\large{{Founder and Director - MailClerk.com}}} \href{}{ }} $|$ {\underline{PHP/Symfony/Stripe/mySQL}}}{June 2020 - Feb	2021}
-  \resumeItemListStart
-    \resumeItemNoBullet{\normalsize{MailClerk.com provided software for SMBs in the mail handling field to manage their 
-    customers mail and accounts.  It tracks mail through multiple kinds of customer requests and provide an 
-    online wallet with automatic billing for specific services. Integrated with Notarize.com's API for customer
-     validation. I Designed and launched the US-based MailClerk.com. Handled the design of the 
-    application and integration of API services. Responsible for the management of daily business affairs, 
-    contracts and employees.}}
-
-     
-  \resumeItemListEnd
-  
-
-  \resumeProjectHeading
-    {{\textbf{\large{{Project Designer  - Maple Film Supply Voltage Tx}}}} $|$ {\underline{React/Electron/C++/Integrated Circuit}}}{Aug 2020}
-  \resumeItemListStart
-    \resumeItemNoBullet{\normalsize{Built a MVP transmitter that allows a user to monitor the voltage of multiple devices
-     on an Android app.  \textbf{Designed the overall project and recruited volunteers}}}
-  \resumeItemListEnd
-  
-  
-  \resumeProjectHeading
-    {{\textbf{\large{{Software \& Hardware Team Lead - LayoverBox.com}}}} $|$ {\underline{React/Electron/RS-232/mySQL}}}{Aug 2016 - June 2020}
-  \resumeItemListStart
-    \resumeItemNoBullet{\normalsize{Built a MVP mailbox with the UBC Electrical Engineering program's Capstone Project.
-      The mailbox was part of a integrated service that provided an address and parcel storage receiving parcels
-       from couriers without the need for a human clerk.  SouthCo Lock Integration uses RS232, React Electron
-        local app. Product successfully served over a hundred customers before the business closed down because 
-        the founder had other priorities. \textbf{Led both the software and hardware engineering teams and chose
-        the tech stack}}}
-  \resumeItemListEnd
-  
-
-  \resumeProjectHeading
-    {\href{}{\textbf{\large{{Founder and Director - eSnail.ca}}} \href{}{ }} $|$ {\underline{PHP/Kohanna/Moneris/mySQL}}}{Feb	2008 - March 2023}
-  \resumeItemListStart
-   \resumeItemNoBullet{\normalsize{eSnail.ca  provided individuals individuals with software to view their mail online for fifteen years.
-   Acted as the Founder and Director of the Company from 2008 - Managed three franchises in three different 
-    cities and two employees. Handled taxes and payroll as well as software maintenance}}
-  \resumeItemListEnd
-  \resumeSubHeadingListEnd
-
-\vspace{0pt}
-
-%-----------EXPERIENCE-----------
-\section{Management Experience}
-\setstretch{1.25}
-
-\resumeSubHeadingListStart
-  \resumeSubheading
-    {MailClerk.com}{2020 - 2021}
-    {\underline{Director}}{Missoula, MT}
-  \resumeItemListStart
-    \resumeItemNoBullet{\normalsize{Oversaw the establishment and expansion of operations including franchises into the US.}}
-  \resumeItemListEnd
-\resumeSubHeadingListEnd
-
-\resumeSubHeadingListStart
-  \resumeSubheading
-    {eSnail.ca}{2008 - 2023}
-    {\underline{Director}}{Vancouver, BC}
-  \resumeItemListStart
-    \resumeItemNoBullet{\normalsize{Managed two part time employees and three franchises in Canada}}
-  \resumeItemListEnd
-\resumeSubHeadingListEnd
-
-\resumeSubHeadingListStart
-  \resumeSubheading
-    {Film Industry - Focus Puller }{2010 - 2020}
-    {\underline{Team Lead}}{Vancouver, BC}
-  \resumeItemListStart
-    \resumeItemNoBullet{\normalsize{Responsible for the management of all camera equipment and personnel for \$1 million- \$40 million projects. Managed teams of ten people including scheduling, conflict resolution and hiring. Interfaced with IATSE 669 union on a regular basis.}}
-  \resumeItemListEnd
-\resumeSubHeadingListEnd
-
-%-----------PROGRAMMING SKILLS-----------
-\section{TECHNICAL SKILLS}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-    \textbf{\normalsize{Languages: }}{\normalsize{Python, JavaScript, SQL, PHP}} \\
-    \textbf{\normalsize{Developer Tools: }}{\normalsize{VS Code, Android Studio, Unity}} \\
-    \textbf{\normalsize{Technologies/Frameworks: }}{\normalsize{Bash, Git, ReactJS, Redux, Heroku, AWS,
-     React Native, React with Electron, Postman, Vercel, Claude CLI}} \\
-    \textbf{\normalsize{Creative Tools: }}{\normalsize{Photoshop, GNU, Fusion 360, FreeCAD, Krita, Procreate, Inkscape}} \\
-    \textbf{\normalsize{Manufacturing Tools: }}{\normalsize{CNC, CAM, FDM, PRUSA \& Creality 3D printers}} \\
-    \textbf{\normalsize{Operating Systems }}{\normalsize{Familiar with Linux, Windows, OS}} \\
+    \textbf{Languages:} PHP, JavaScript, TypeScript, Python, SQL, C++, HTML, CSS \\
+    \textbf{Frameworks:} Laravel 11, Symfony, Vue 3, Vuetify, React, Redux, React Native, Electron, Kohana, Pinia, Vue Router, Vite \\
+    \textbf{Databases:} MySQL, SQLite \\
+    \textbf{Integrations:} Stripe, Moneris, Resend, Notarize.com API, Sanctum auth, RS-232, REST APIs \\
+    \textbf{DevOps \& Tools:} Git, SSH, rsync, Bash, AWS, Heroku, Vercel, CloudPanel, Postman, PHPUnit, Vite, VS Code, Claude CLI \\
+    \textbf{Creative \& Manufacturing:} Photoshop, Fusion 360, FreeCAD, Inkscape, Krita, Procreate, CNC, CAM, FDM, Prusa \& Creality 3D printers \\
+    \textbf{Operating Systems:} Linux, Windows, macOS
   }}
 \end{itemize}
 
+%----------EXPERIENCE----------
+\section{EXPERIENCE}
+\setstretch{1.15}
 
-%-----------INVOLVEMENT---------------
-\section{EXTRACURRICULAR}
 \resumeSubHeadingListStart
-  \resumeSubheading{Writing}{}{\underline{}}{}
+
+  \resumeProjectHeading
+    {\href{https://3dprint.stephandouglasduval.com}{\textbf{\large{3D Printing Services Missoula}}} $|$ \underline{PHP, JavaScript, HTML}}{May 2026}
   \resumeItemListStart
-    \resumeItem{\normalsize{Writing short stories for my daughter}}
+    \resumeItemNoBullet{\normalsize{Marketplace where customers upload files for instant 3D-printing quotations before ordering, and anyone can register their own 3D printing business to connect with new customers. Designed and built the proof-of-concept end to end.}}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{\large{Wrioter Writing Software}} $|$ \underline{Vue 3, TypeScript, Laravel 11, MySQL}}{Jan 2023 -- Present}
+  \resumeItemListStart
+    \resumeItemNoBullet{\normalsize{Lead developer on browser-based writing software for long-form authors. Built mind-map canvas (Vue Flow), dynamic text snippets that live-reference text across manuscripts, drag-and-drop chapter organization, and Scrivener file import. Backend uses Laravel 11 with Sanctum SPA auth, CASL permissions, vue-i18n translation framework, and PHPUnit 11 feature tests.}}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{\large{Freynet-Gagne Customer Portal}} $|$ \underline{Vue, Laravel, MySQL}}{Dec 2022 -- Feb 2023}
+  \resumeItemListStart
+    \resumeItemNoBullet{\normalsize{Built a customer portal under government contract where agents could initiate, track, and approve changes to translations of official documents.}}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{\large{Lead Developer -- Cognitive Research Project}} $|$ \underline{React, Redux}}{Jun 2021 -- Nov 2022}
+  \resumeItemListStart
+    \resumeItemNoBullet{\normalsize{Lead developer on an approved University of Missoula doctoral thesis project. Built an interactive site using React Hooks and Redux that logged user input and responses to visual stimuli for data processing. Project surfaced new categories of timing data that pivoted the thesis, and the client commissioned two additional follow-on tests.}}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{\large{Founder \& Director -- MailClerk.com}} $|$ \underline{PHP, Symfony, Stripe, MySQL}}{Jun 2020 -- Feb 2021}
+  \resumeItemListStart
+    \resumeItemNoBullet{\normalsize{Designed, built, and launched US-based MailClerk.com — software for SMBs in mail handling to manage customers' mail and accounts, with an online wallet and automatic billing. Integrated Notarize.com's API for customer identity validation. Responsible for application design, API integration, daily business operations, contracts, and personnel.}}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{\large{Project Designer -- Maple Film Supply Voltage Tx}} $|$ \underline{React, Electron, C++, integrated circuits}}{Aug 2020}
+  \resumeItemListStart
+    \resumeItemNoBullet{\normalsize{Designed an MVP wireless transmitter allowing users to monitor voltage of multiple devices via an Android app. Owned overall project design and recruited the volunteer engineering team.}}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{\large{Software \& Hardware Team Lead -- LayoverBox.com}} $|$ \underline{React, Electron, RS-232, MySQL}}{Aug 2016 -- Jun 2020}
+  \resumeItemListStart
+    \resumeItemNoBullet{\normalsize{Led both software and hardware engineering teams (built with UBC's Electrical Engineering Capstone) to ship an MVP smart parcel-receiving mailbox — couriers drop parcels with no human clerk. Selected the technology stack; SouthCo lock integration over RS-232, React/Electron local app. Product served over 100 customers before the founder wound the business down.}}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\href{https://esnail.ca}{\textbf{\large{Founder \& Director -- eSnail.ca}}} $|$ \underline{PHP, Kohana, Moneris, MySQL}}{Feb 2008 -- Mar 2023}
+  \resumeItemListStart
+    \resumeItemNoBullet{\normalsize{Founded and ran eSnail.ca — software that let individuals view their postal mail online — for 15 years. Managed 3 franchises across 3 cities and 2 employees. Handled taxes, payroll, and software maintenance through the full company lifecycle.}}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{0pt}
+
+%----------MANAGEMENT EXPERIENCE----------
+\section{MANAGEMENT EXPERIENCE}
+\setstretch{1.15}
+
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {MailClerk.com}{2020 -- 2021}
+    {\underline{Director}}{Missoula, MT}
+  \resumeItemListStart
+    \resumeItemNoBullet{\normalsize{Oversaw establishment and US expansion of operations, including franchise rollouts.}}
   \resumeItemListEnd
 \resumeSubHeadingListEnd
 
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {eSnail.ca}{2008 -- 2023}
+    {\underline{Director}}{Vancouver, BC}
+  \resumeItemListStart
+    \resumeItemNoBullet{\normalsize{Managed 3 franchises across Canada and 2 part-time employees over a 15-year operating window.}}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
 
-%-----------CERTIFICATIONS---------------
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Film Industry -- Focus Puller}{2010 -- 2020}
+    {\underline{Team Lead}}{Vancouver, BC}
+  \resumeItemListStart
+    \resumeItemNoBullet{\normalsize{Responsible for all camera equipment and personnel on \$1M--\$40M productions. Managed teams of 10 including scheduling, conflict resolution, and hiring. Interfaced regularly with IATSE 669 union.}}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
 
+%----------EDUCATION----------
+\section{EDUCATION}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Western Governors University}{Jul 2026 -- Ongoing}
+    {\textbf{Bachelor of Science, Computer Science}}{Salt Lake City, UT}
+  \resumeSubheading
+    {University of Alberta}{Jan 2003 -- Aug 2007}
+    {\textbf{Bachelor of Arts, English (Film)}}{Edmonton, AB}
+\resumeSubHeadingListEnd
 
-
-
+%----------EXTRACURRICULAR----------
+\section{EXTRACURRICULAR}
+\resumeSubHeadingListStart
+  \resumeItemNoBullet{\normalsize{\textbf{Drones \& Robotics:} Building autonomous fixed-wing drones (C++, ArduPilot).}}
+  \resumeItemNoBullet{\normalsize{\textbf{Fabrication:} 3D printing, CNC machining, traditional woodcarving.}}
+  \resumeItemNoBullet{\normalsize{\textbf{Electronics:} Prototyping circuits — wireless voltage meter, LoRa radio.}}
+  \resumeItemNoBullet{\normalsize{\textbf{Writing:} Short stories for my daughter.}}
+\resumeSubHeadingListEnd
 
 \end{document}
-

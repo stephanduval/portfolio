@@ -93,9 +93,13 @@ function showScoreboard() {
 function setLowerThird(label, text, story = '') {
     if (!lowerThirdEl) return;
     lowerThirdEl.classList.add('visible');
-    if (lowerThirdLabel) lowerThirdLabel.textContent = label;
-    if (lowerThirdText)  lowerThirdText.textContent  = text;
-    if (lowerThirdStory) lowerThirdStory.textContent = story;
+    // When minimized, preserve the label but always update text and story.
+    const isMinimized = lowerThirdEl.classList.contains('minimized');
+    if (!isMinimized && lowerThirdLabel) lowerThirdLabel.textContent = label;
+    if (lowerThirdText)  lowerThirdText.textContent  = text;  // Always update text
+    if (lowerThirdStory) lowerThirdStory.textContent = story; // Always update story
+    // Track active scene for styling (e.g., red label for "ROOKIE YEAR")
+    lowerThirdEl.setAttribute('data-active-scene', label.toLowerCase().replace(/\s+/g, '-'));
 }
 
 function hideLowerThird() {
@@ -405,8 +409,8 @@ gsap.timeline({
         end: '+=1500',
         pin: true,
         scrub: 1,
-        onEnter:     () => activateScene({ label: '1980s', text: 'ROOKIE', story: SCENE_STORY.rookie, period: 'PERIOD 1', seedSeconds: 1200, countdown: true }),
-        onEnterBack: () => activateScene({ label: '1980s', text: 'ROOKIE', story: SCENE_STORY.rookie, period: 'PERIOD 1', seedSeconds: 1200, countdown: true }),
+        onEnter:     () => activateScene({ label: 'ROOKIE YEAR', text: '1980s', story: SCENE_STORY.rookie, period: 'PERIOD 1', seedSeconds: 1200, countdown: true }),
+        onEnterBack: () => activateScene({ label: 'ROOKIE YEAR', text: '1980s', story: SCENE_STORY.rookie, period: 'PERIOD 1', seedSeconds: 1200, countdown: true }),
     },
 })
     .fromTo('.faceoff-clip-circle',
@@ -716,7 +720,7 @@ if (lowerThirdEl) {
 // adds `.in-view` so CSS can fade the section up. No pinning, no scrub.
 if (isMobile) {
     const MOBILE_SCENES = {
-        faceoff:       { label: '1980s',       text: 'ROOKIE',                       story: SCENE_STORY.rookie,          period: 'PERIOD 1', seedSeconds: 1200, countdown: true },
+        faceoff:       { label: 'ROOKIE YEAR', text: '1980s',                        story: SCENE_STORY.rookie,          period: 'PERIOD 1', seedSeconds: 1200, countdown: true },
         'long-shift':  { label: 'FILM CAREER', text: 'FOCUS PULLER - 18 SEASONS',     story: SCENE_STORY.focusPuller,     period: 'PERIOD 1', seedSeconds: 884,  countdown: true },
         breakaway:     { label: 'BREAKAWAY',   text: 'STARTUPS',                      story: SCENE_STORY.startups,        period: 'PERIOD 2', seedSeconds: 1200, countdown: true },
         'tic-tac-toe': { label: 'PASSING PLAY',text: 'CURRENT VENTURES',              story: SCENE_STORY.currentVentures, period: 'PERIOD 3', seedSeconds: 1200, countdown: true },
