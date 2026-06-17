@@ -137,6 +137,7 @@
                     <svg viewBox="0 0 24 24" fill="currentColor">
                         <path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 1 1 8.3 6.5a1.78 1.78 0 0 1-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0 0 13 14.19a.66.66 0 0 0 0 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 0 1 2.7-1.4c1.55 0 3.36.86 3.36 3.66z"/>
                     </svg>
+                    <span>LinkedIn</span>
                 </a>
                 <a href="https://github.com/stephanduval" target="_blank" rel="noopener" class="icon-btn icon-btn-desktop-only" title="GitHub" aria-label="GitHub">
                     <svg viewBox="0 0 24 24" fill="currentColor">
@@ -144,11 +145,19 @@
                     </svg>
                     <span>GitHub</span>
                 </a>
-                <a href="https://wgu.joinhandshake.com/profiles/sduval" target="_blank" rel="noopener" class="icon-btn icon-btn-desktop-only" title="Handshake" aria-label="Handshake">
+                <a href="https://www.imdb.com/name/nm4179709/?ref_=fn_t_2" target="_blank" rel="noopener" class="icon-btn" title="IMDb" aria-label="IMDb">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M17 14v6m-5-6v6M9 11L7 9m8 2l2-2M9 19h6m-6-3h6M3 12a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7zm12 0a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-7z"/>
+                        <rect x="2" y="7" width="20" height="10" rx="1"/>
+                        <rect x="2" y="4" width="3" height="3"/>
+                        <rect x="7" y="4" width="3" height="3"/>
+                        <rect x="12" y="4" width="3" height="3"/>
+                        <rect x="17" y="4" width="3" height="3"/>
+                        <rect x="2" y="17" width="3" height="3"/>
+                        <rect x="7" y="17" width="3" height="3"/>
+                        <rect x="12" y="17" width="3" height="3"/>
+                        <rect x="17" y="17" width="3" height="3"/>
                     </svg>
-                    <span>Handshake</span>
+                    <span>IMDb</span>
                 </a>
                 <a href="assets/resume.pdf" download="Stephan_Duval_Resume.pdf" target="_blank" rel="noopener" class="icon-btn" title="Resume" aria-label="Resume">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -396,8 +405,8 @@
             <article class="proj-card" data-card="3" style="top: 340px; left: 50%; transform: translateX(-50%);">
                 <h3>Wrioter</h3>
                 <p class="proj-date">2023 — Lead Developer</p>
-                <p>Online writing software for complex multi-chapter projects — mindmaps, visualizations, and drag-and-drop organization.</p>
-                <div class="proj-tags"><span>Vue</span><span>Laravel</span><span>MySQL</span></div>
+                <p>Online writing software for complex multi-chapter projects — mindmaps, visualizations, drag-and-drop organization, and AI-powered text summarization via Claude API.</p>
+                <div class="proj-tags"><span>Vue</span><span>Laravel</span><span>Claude API</span></div>
             </article>
             <article class="proj-card" data-card="4" style="bottom: 80px; left: 380px;">
                 <img class="proj-thumb" src="assets/Raster%20Images/Projects%20-%20Drone%20White.jpg" alt="Drone & Robotics">
@@ -488,6 +497,15 @@
                 <article class="tele-topic" data-topic="8">
                     <span class="tele-tag">Import</span>
                     <h3>Imports Scrivener files into the Wrioter format</h3>
+                </article>
+                <article class="tele-topic detailed" data-topic="9">
+                    <span class="tele-tag">AI Integration</span>
+                    <h3>Claude API Summarization</h3>
+                    <ul class="tele-subs">
+                        <li>Server-side Anthropic integration with rate limiting</li>
+                        <li>In-editor context menu summarization UI</li>
+                        <li>Input validation, error handling, clipboard export</li>
+                    </ul>
                 </article>
             </div>
         </div>
