@@ -89,6 +89,14 @@ h1, h2, h3 {
     color: var(--primary);
     text-decoration: none;
     letter-spacing: 0.02em;
+    border-radius: 6px;
+    padding: 6px 12px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.logo:hover {
+    background: rgba(0, 0, 0, 0.06);
+    transform: translateY(-1px);
 }
 
 .nav-icons {
@@ -921,6 +929,17 @@ h1, h2, h3 {
 @media (max-width: 768px) {
     /* Hide desktop-only navbar links on mobile */
     .icon-btn-desktop-only {
+        display: none;
+    }
+
+    /* Reduce gap between icons on mobile */
+    .nav-icons {
+        gap: 8px;
+    }
+
+    /* Hide LinkedIn and IMDb text on mobile */
+    .icon-btn:nth-child(2) span,
+    .icon-btn:nth-child(3) span {
         display: none;
     }
 
